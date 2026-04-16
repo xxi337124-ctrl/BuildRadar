@@ -1,0 +1,58 @@
+name: Daily Report
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # UTC 03:00 = 北京时间 11:00
+  workflow_dispatch:        # 允许手动触发（调试用）
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: buildradar-daily
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PH_TOKEN: ${{ secrets.PH_TOKEN }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python main.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "BuildRadar Bot"
+          git config user.email "bot@buildradar.dev"
+          git add data/ site/
+          git diff --staged --quiet || git commit -m "Daily report $(date -u +%Y-%m-%d)"
+          git push
+
+  deploy:
+    needs: generate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ report.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ report.summary }}" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%2358a6ff%22/><text x=%2250%25%22 y=%2256%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22700%22 font-size=%2234%22 fill=%22%230d1117%22>BR</text></svg>" />
+  <style>
+    :root{
+      --bg:#0d1117;
+      --panel:#161b22;
+      --border:#30363d;
+      --fg:#e6edf3;
+      --muted:#8b949e;
+      --accent:#58a6ff;
+      --accent2:#3fb950;
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",ui-sans-serif,sans-serif;line-height:1.75;}
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .container{max-width:760px;margin:0 auto;padding:32px 24px 96px;}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:32px;}
+    .nav a.back{color:var(--muted);font-size:14px;}
+    .nav a.back:hover{color:var(--accent);text-decoration:none;}
+    .report-date{color:var(--muted);font-size:13px;margin-top:4px;letter-spacing:1px;}
+    article{font-size:16px;}
+    article h1{font-size:30px;margin:20px 0 8px;letter-spacing:-0.5px;}
+    article h2{font-size:22px;margin-top:42px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+    article h3{font-size:18px;margin-top:28px;color:var(--fg);}
+    article p{margin:12px 0;}
+    article ul,article ol{padding-left:24px;}
+    article li{margin:6px 0;}
+    article blockquote{border-left:3px solid var(--accent);margin:16px 0;padding:4px 16px;color:var(--muted);background:var(--panel);border-radius:0 6px 6px 0;}
+    article code{background:#1f2937;padding:2px 6px;border-radius:4px;font-size:0.9em;font-family:"SF Mono","JetBrains Mono",ui-monospace,"Menlo",monospace;}
+    article pre{background:var(--panel);border:1px solid var(--border);padding:14px 16px;border-radius:8px;overflow-x:auto;}
+    article pre code{background:transparent;padding:0;}
+    article table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14px;display:block;overflow-x:auto;}
+    article table th,article table td{border:1px solid var(--border);padding:8px 12px;text-align:left;}
+    article table th{background:var(--panel);color:var(--fg);}
+    article table tr:nth-child(even) td{background:rgba(255,255,255,0.02);}
+    article hr{border:none;border-top:1px solid var(--border);margin:32px 0;}
+    .cta-box{margin-top:48px;padding:24px;border:1px solid var(--border);background:var(--panel);border-radius:10px;text-align:center;}
+    .cta-box h3{margin:0 0 8px;font-size:18px;}
+    .cta-box p{color:var(--muted);margin:0 0 16px;}
+    .cta{display:inline-block;background:var(--accent);color:#0d1117;font-weight:600;padding:10px 18px;border-radius:6px;}
+    .cta:hover{text-decoration:none;opacity:0.9;}
+    .pager{display:flex;justify-content:space-between;margin-top:40px;gap:12px;}
+    .pager a{flex:1;padding:14px;background:var(--panel);border:1px solid var(--border);border-radius:8px;color:var(--muted);font-size:13px;}
+    .pager a:hover{border-color:var(--accent);color:var(--fg);text-decoration:none;}
+    .pager a.next{text-align:right;}
+    footer{margin-top:64px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a class="back" href="../index.html">← 返回首页</a>
+      <span class="report-date">{{ report.date }}</span>
+    </div>
+
+    <article>
+      {{ report.body_html | safe }}
+    </article>
+
+    <div class="pager">
+      {% if prev_report %}
+        <a class="prev" href="{{ prev_report.slug }}.html">← 更早：{{ prev_report.date }}</a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      {% if next_report %}
+        <a class="next" href="{{ next_report.slug }}.html">更新：{{ next_report.date }} →</a>
+      {% else %}
+        <span></span>
+      {% endif %}
+    </div>
+
+    <div class="cta-box">
+      <h3>每天 5 分钟，知道该构建什么</h3>
+      <p>BuildRadar 每天自动采集 6 个平台的开发者信号，用 LLM 交叉分析，帮你发现真正值得做的事。</p>
+      <a class="cta" href="{{ site.newsletter_url }}">免费订阅 Newsletter</a>
+    </div>
+
+    <footer>
+      <p>BuildRadar · 由 GitHub Actions 每日自动生成</p>
+    </footer>
+  </div>
+</body>
+</html>
