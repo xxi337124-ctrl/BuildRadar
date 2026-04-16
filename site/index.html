@@ -4,69 +4,522 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BuildRadar — 每天 5 分钟，知道该构建什么</title>
-  <meta name="description" content="每天 5 分钟，知道该构建什么。每天自动采集 HN、GitHub、Product Hunt、HuggingFace、Google Trends、Reddit 的信号并用 LLM 交叉分析。" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%2358a6ff%22/><text x=%2250%25%22 y=%2256%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22700%22 font-size=%2234%22 fill=%22%230d1117%22>BR</text></svg>" />
+  <meta name="description" content="每天 5 分钟，知道该构建什么。每天自动采集 Hacker News、GitHub、Product Hunt、HuggingFace、Google Trends、Reddit 的信号，用 LLM 交叉分析。" />
+  <meta property="og:title" content="BuildRadar — 每天 5 分钟，知道该构建什么" />
+  <meta property="og:description" content="每天自动采集 6 个平台的开发者信号，用 LLM 交叉分析，发现真正值得做的事。" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%237c5cff%22/><stop offset=%221%22 stop-color=%22%2300d4ff%22/></linearGradient></defs><rect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22url(%23g)%22/><circle cx=%2232%22 cy=%2232%22 r=%2222%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-opacity=%220.35%22 stroke-width=%222%22/><circle cx=%2232%22 cy=%2232%22 r=%2212%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-opacity=%220.6%22 stroke-width=%222%22/><circle cx=%2232%22 cy=%2232%22 r=%224%22 fill=%22%23ffffff%22/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0d1117;
-      --panel:#161b22;
-      --border:#30363d;
-      --fg:#e6edf3;
-      --muted:#8b949e;
-      --accent:#58a6ff;
-      --accent2:#3fb950;
+      --bg:#0a0a0f;
+      --bg-2:#10101a;
+      --panel:rgba(255,255,255,0.04);
+      --panel-2:rgba(255,255,255,0.06);
+      --border:rgba(255,255,255,0.08);
+      --border-strong:rgba(255,255,255,0.16);
+      --fg:#f5f5f7;
+      --fg-2:#cfcfd6;
+      --muted:#8a8a96;
+      --accent:#7c5cff;
+      --accent-2:#00d4ff;
+      --accent-3:#ff6ec7;
+      --good:#3fe0a0;
+      --warn:#ffb454;
+      --shadow-soft: 0 1px 0 rgba(255,255,255,0.04) inset, 0 30px 60px -30px rgba(0,0,0,0.6);
+      --radius:16px;
+      --radius-sm:10px;
+      --radius-lg:22px;
+      --max:1100px;
     }
+
     *{box-sizing:border-box;}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","SF Mono","JetBrains Mono",ui-monospace,"Menlo","Consolas",monospace;line-height:1.6;}
-    a{color:var(--accent);text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .container{max-width:820px;margin:0 auto;padding:48px 24px 96px;}
-    header{border-bottom:1px solid var(--border);padding-bottom:32px;margin-bottom:32px;}
-    .brand{display:flex;align-items:center;gap:12px;}
-    .logo{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#0d1117;}
-    h1{font-size:34px;margin:16px 0 8px;letter-spacing:-0.5px;}
-    .tagline{color:var(--muted);font-size:16px;margin:0 0 20px;}
-    .cta{display:inline-block;background:var(--accent);color:#0d1117;font-weight:600;padding:10px 18px;border-radius:6px;margin-right:8px;}
-    .cta.secondary{background:transparent;color:var(--fg);border:1px solid var(--border);}
-    .cta:hover{text-decoration:none;opacity:0.9;}
-    h2{font-size:20px;margin-top:40px;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:1px;}
-    .reports{margin-top:16px;display:flex;flex-direction:column;gap:16px;}
-    .report-card{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:20px 22px;transition:border-color 0.15s ease;}
-    .report-card:hover{border-color:var(--accent);}
-    .report-card a.title{display:block;font-size:18px;font-weight:600;color:var(--fg);margin-bottom:6px;}
-    .report-card a.title:hover{color:var(--accent);text-decoration:none;}
-    .report-meta{color:var(--muted);font-size:13px;margin-bottom:10px;}
-    .report-summary{color:var(--muted);font-size:14px;margin:0;}
-    footer{margin-top:72px;color:var(--muted);font-size:13px;border-top:1px solid var(--border);padding-top:24px;text-align:center;}
-    .empty{color:var(--muted);padding:24px;text-align:center;border:1px dashed var(--border);border-radius:8px;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;padding:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei','Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;
+      font-feature-settings:'cv11','ss01','ss03';
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      letter-spacing:-0.005em;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none;}
+
+    /* 背景：径向渐变 + 网格 */
+    .bg-fx{
+      position:fixed;inset:0;z-index:-1;pointer-events:none;
+      background:
+        radial-gradient(60vw 60vw at 15% -10%, rgba(124,92,255,0.18), transparent 60%),
+        radial-gradient(50vw 50vw at 110% 10%, rgba(0,212,255,0.14), transparent 55%),
+        radial-gradient(50vw 50vw at 80% 100%, rgba(255,110,199,0.10), transparent 55%),
+        var(--bg);
+    }
+    .bg-grid{
+      position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.35;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    }
+
+    .container{max-width:var(--max);margin:0 auto;padding:0 24px;}
+
+    /* 顶部导航 */
+    nav.top{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      background:rgba(10,10,15,0.55);
+      border-bottom:1px solid var(--border);
+    }
+    nav.top .inner{
+      max-width:var(--max);margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 24px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-0.02em;}
+    .brand .logo{
+      width:32px;height:32px;border-radius:9px;
+      background:conic-gradient(from 220deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+      position:relative;display:grid;place-items:center;
+      box-shadow:0 8px 24px -8px rgba(124,92,255,0.55);
+    }
+    .brand .logo::before{
+      content:"";position:absolute;inset:3px;border-radius:7px;background:#0a0a0f;
+    }
+    .brand .logo::after{
+      content:"";position:absolute;width:6px;height:6px;border-radius:50%;
+      background:#fff;box-shadow:0 0 10px rgba(255,255,255,0.7);
+    }
+    .brand .name{font-size:15px;}
+    nav.top .links{display:flex;gap:24px;align-items:center;}
+    nav.top .links a{
+      font-size:14px;color:var(--muted);transition:color .2s ease;
+    }
+    nav.top .links a:hover{color:var(--fg);}
+    nav.top .cta{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 14px;border-radius:999px;
+      background:var(--fg);color:#0a0a0f;
+      font-size:13px;font-weight:600;letter-spacing:-0.01em;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    nav.top .cta:hover{transform:translateY(-1px);box-shadow:0 12px 30px -10px rgba(255,255,255,0.4);}
+
+    /* Hero */
+    header.hero{
+      padding:64px 0 56px;
+      text-align:center;
+      position:relative;
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 14px;border-radius:999px;
+      background:var(--panel);border:1px solid var(--border-strong);
+      font-size:13px;color:var(--fg-2);
+      font-family:'JetBrains Mono',ui-monospace,monospace;letter-spacing:0;
+    }
+    .badge .dot{
+      width:7px;height:7px;border-radius:50%;background:var(--good);
+      box-shadow:0 0 0 4px rgba(63,224,160,0.15);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%,100%{box-shadow:0 0 0 0 rgba(63,224,160,0.4);}
+      50%{box-shadow:0 0 0 10px rgba(63,224,160,0);}
+    }
+
+    h1.hero-title{
+      font-size: clamp(40px, 6.5vw, 80px);
+      line-height:1.08;
+      font-weight:800;
+      letter-spacing:-0.04em;
+      margin:22px auto 18px;
+      max-width:18ch;
+    }
+    h1.hero-title em{
+      font-family:'Instrument Serif',serif;
+      font-style:italic;font-weight:400;
+      background: linear-gradient(120deg, var(--accent), var(--accent-2) 50%, var(--accent-3));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      letter-spacing:-0.02em;
+    }
+    .hero-sub{
+      font-size: clamp(16px, 1.6vw, 19px);
+      color:var(--fg-2);
+      max-width:60ch;margin:0 auto 36px;
+      line-height:1.65;
+    }
+    .hero-actions{
+      display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:14px 22px;border-radius:12px;
+      font-size:15px;font-weight:600;letter-spacing:-0.01em;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      cursor:pointer;border:none;
+    }
+    .btn-primary{
+      background:linear-gradient(120deg, var(--accent), var(--accent-2));
+      color:#0a0a0f;
+      box-shadow: 0 14px 40px -14px rgba(124,92,255,0.7), inset 0 1px 0 rgba(255,255,255,0.4);
+    }
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 22px 50px -16px rgba(124,92,255,0.85);}
+    .btn-ghost{
+      background:var(--panel);color:var(--fg);border:1px solid var(--border-strong);
+    }
+    .btn-ghost:hover{background:var(--panel-2);border-color:rgba(255,255,255,0.28);}
+    .btn .arrow{transition:transform .2s ease;}
+    .btn:hover .arrow{transform:translateX(3px);}
+
+    /* 平台 logo 行 */
+    .platforms{
+      margin:64px auto 0;
+      max-width:780px;
+      text-align:center;
+    }
+    .platforms .label{
+      color:var(--muted);font-size:12px;letter-spacing:0.18em;text-transform:uppercase;
+      font-family:'JetBrains Mono',ui-monospace,monospace;
+    }
+    .platforms .row{
+      margin-top:18px;
+      display:flex;flex-wrap:wrap;justify-content:center;gap:10px 14px;
+    }
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 14px;border-radius:999px;
+      background:var(--panel);border:1px solid var(--border);
+      font-size:13px;color:var(--fg-2);
+      transition: all .2s ease;
+    }
+    .chip:hover{border-color:var(--border-strong);color:var(--fg);transform:translateY(-1px);}
+    .chip .swatch{width:8px;height:8px;border-radius:50%;}
+    .chip.hn .swatch{background:#ff6600;}
+    .chip.gh .swatch{background:#ffffff;}
+    .chip.ph .swatch{background:#da552f;}
+    .chip.hf .swatch{background:#ffd21e;}
+    .chip.gt .swatch{background:#4285f4;}
+    .chip.rd .swatch{background:#ff4500;}
+
+    /* Section title */
+    .section{padding:80px 0;}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:32px;flex-wrap:wrap;}
+    .eyebrow{
+      font-family:'JetBrains Mono',ui-monospace,monospace;
+      font-size:12px;letter-spacing:0.18em;color:var(--accent-2);text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    h2.section-title{
+      font-size: clamp(28px, 3.6vw, 44px);
+      font-weight:700;letter-spacing:-0.025em;line-height:1.1;
+      margin:0;max-width:18ch;
+    }
+    .section-desc{
+      color:var(--fg-2);font-size:15px;max-width:46ch;margin:0;
+    }
+
+    /* Reports grid */
+    .reports{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap:18px;
+    }
+    /* 单卡片时变成精选大卡片 */
+    .reports.single{grid-template-columns:1fr;}
+    .reports.single .report-card{
+      padding:40px;
+      display:grid;grid-template-columns: 1.4fr 1fr;gap:36px;
+      align-items:center;
+    }
+    .reports.single .report-card h3{font-size:30px;line-height:1.2;}
+    .reports.single .report-card p.summary{font-size:15px;-webkit-line-clamp:6;}
+    .reports.single .report-card .meta{justify-content:flex-start;gap:12px;}
+    .reports.single .report-card .featured-badge{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:4px 10px;border-radius:999px;
+      background:linear-gradient(120deg, rgba(124,92,255,0.25), rgba(0,212,255,0.25));
+      border:1px solid rgba(124,92,255,0.4);
+      font-family:'JetBrains Mono',ui-monospace,monospace;
+      font-size:11px;color:var(--fg);letter-spacing:0.06em;
+    }
+    .reports.single .right-col{
+      display:flex;flex-direction:column;align-items:flex-end;gap:14px;
+    }
+    .reports.single .right-col .big-arrow{
+      width:56px;height:56px;border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--fg);color:#0a0a0f;
+      font-size:22px;font-weight:600;
+      transition: transform .3s ease;
+    }
+    .reports.single .report-card:hover .right-col .big-arrow{transform:rotate(-45deg) scale(1.05);}
+    @media (max-width:720px){
+      .reports.single .report-card{grid-template-columns:1fr;padding:28px;}
+      .reports.single .right-col{align-items:flex-start;}
+    }
+    .report-card{
+      position:relative;
+      padding:24px;
+      border-radius:var(--radius);
+      background: linear-gradient(180deg, var(--panel-2), var(--panel));
+      border:1px solid var(--border);
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+      display:flex;flex-direction:column;gap:14px;
+      overflow:hidden;
+      isolation:isolate;
+    }
+    .report-card::before{
+      content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .3s ease;
+      background: radial-gradient(400px 200px at var(--mx,50%) -10%, rgba(124,92,255,0.18), transparent 60%);
+    }
+    .report-card:hover{
+      transform:translateY(-3px);
+      border-color:var(--border-strong);
+      box-shadow: var(--shadow-soft);
+    }
+    .report-card:hover::before{opacity:1;}
+    .report-card .meta{
+      display:flex;align-items:center;justify-content:space-between;
+      font-family:'JetBrains Mono',ui-monospace,monospace;
+      font-size:12px;color:var(--muted);
+    }
+    .report-card .meta .arrow{
+      width:32px;height:32px;border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--panel);border:1px solid var(--border);
+      transition: all .2s ease;
+    }
+    .report-card:hover .meta .arrow{
+      background:var(--fg);color:#0a0a0f;border-color:var(--fg);
+      transform:rotate(-45deg);
+    }
+    .report-card h3{
+      font-size:19px;font-weight:600;letter-spacing:-0.015em;line-height:1.35;
+      margin:0;color:var(--fg);
+    }
+    .report-card p.summary{
+      color:var(--fg-2);font-size:14px;margin:0;
+      display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+    }
+    .report-card .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;}
+    .report-card .tag{
+      font-size:11px;padding:3px 8px;border-radius:6px;
+      background:rgba(255,255,255,0.05);color:var(--muted);
+      font-family:'JetBrains Mono',ui-monospace,monospace;
+    }
+
+    .empty{
+      grid-column:1/-1;
+      padding:60px 24px;text-align:center;
+      border:1px dashed var(--border-strong);border-radius:var(--radius);
+      color:var(--muted);
+    }
+
+    /* Features */
+    .features{
+      display:grid;grid-template-columns:repeat(3, 1fr);gap:18px;
+    }
+    @media (max-width:780px){.features{grid-template-columns:1fr;}}
+    .feature{
+      padding:28px;border-radius:var(--radius);
+      background:var(--panel);border:1px solid var(--border);
+      transition: border-color .25s ease, transform .25s ease;
+    }
+    .feature:hover{border-color:var(--border-strong);transform:translateY(-2px);}
+    .feature .icon{
+      width:42px;height:42px;border-radius:12px;
+      display:grid;place-items:center;
+      background: linear-gradient(135deg, rgba(124,92,255,0.18), rgba(0,212,255,0.18));
+      border:1px solid rgba(124,92,255,0.3);
+      margin-bottom:18px;
+      color:var(--accent-2);
+    }
+    .feature h3{font-size:18px;font-weight:600;margin:0 0 8px;letter-spacing:-0.01em;}
+    .feature p{color:var(--fg-2);font-size:14px;margin:0;line-height:1.6;}
+
+    /* CTA */
+    .cta-banner{
+      margin:40px 0 0;
+      padding:48px 36px;
+      border-radius:var(--radius-lg);
+      background:
+        radial-gradient(80% 120% at 0% 0%, rgba(124,92,255,0.22), transparent 60%),
+        radial-gradient(80% 120% at 100% 100%, rgba(0,212,255,0.22), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border:1px solid var(--border-strong);
+      text-align:center;
+      position:relative;overflow:hidden;
+    }
+    .cta-banner h3{
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight:700;letter-spacing:-0.02em;margin:0 0 12px;
+    }
+    .cta-banner p{color:var(--fg-2);max-width:48ch;margin:0 auto 24px;font-size:15px;}
+
+    /* Footer */
+    footer{
+      padding:48px 0 56px;
+      border-top:1px solid var(--border);
+      margin-top:80px;
+      color:var(--muted);font-size:13px;
+    }
+    footer .row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+    footer .links{display:flex;gap:20px;}
+    footer .links a{color:var(--muted);transition:color .2s ease;}
+    footer .links a:hover{color:var(--fg);}
+
+    @media (max-width:640px){
+      header.hero{padding:64px 0 48px;}
+      .section{padding:56px 0;}
+      nav.top .links{display:none;}
+      .cta-banner{padding:36px 24px;}
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">BR</div>
-        <strong style="font-size:15px;color:var(--muted);letter-spacing:2px;">BUILDRADAR</strong>
-      </div>
-      <h1>BuildRadar</h1>
-      <p class="tagline">每天 5 分钟，知道该构建什么</p>
-      <a class="cta" href="https://buttondown.com/buildradar">订阅 Newsletter</a>
-      <a class="cta secondary" href="subscribe.html">了解更多</a>
-    </header>
+  <div class="bg-fx"></div>
+  <div class="bg-grid"></div>
 
-    <h2>每日报告</h2>
-    <div class="reports">
-          <article class="report-card">
-            <a class="title" href="reports/2026-04-17.html">BuildRadar Daily — 2026-04-17</a>
-            <div class="report-meta">2026-04-17</div>
-            <p class="report-summary">BuildRadar Daily — 2026-04-17 ⚠️ 未检测到 ANTHROPIC_API_KEY ，本报告为离线兜底版本，仅展示原始数据骨架，未做 LLM 交叉分析。 🔥 今日 3 大信号 无法生成（需要 Claude API）。 🛠 本周该构建什么 无法生成（需要 Claude API）。 📊 信号雷达 平台 项目/话题 热度指标 趋势 HN Claude Opus 4.7 1199 points 🔺 HN Qwen3.…</p>
-          </article>
+  <nav class="top">
+    <div class="inner">
+      <a class="brand" href="./">
+        <span class="logo"></span>
+        <span class="name">BuildRadar</span>
+      </a>
+      <div class="links">
+        <a href="#latest">最新</a>
+        <a href="#features">为什么</a>
+        <a href="#archive">归档</a>
+<a href="https://github.com/yourusername/buildradar" target="_blank" rel="noopener">GitHub ↗</a>      </div>
+      <a class="cta" href="https://buttondown.com/buildradar" target="_blank" rel="noopener">订阅</a>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="badge"><span class="dot"></span>每天 11:00 自动更新 · UTC+8</span>
+    <h1 class="hero-title">每天 5 分钟，<br/>知道该 <em>构建</em> 什么。</h1>
+    <p class="hero-sub">BuildRadar 每天自动扫描 6 个开发者平台的信号，用 LLM 交叉验证，把噪音过滤成可执行的构建建议。</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="reports/2026-04-17.html">
+        阅读今日报告
+        <span class="arrow">→</span>
+      </a>
+      <a class="btn btn-ghost" href="https://buttondown.com/buildradar" target="_blank" rel="noopener">免费订阅 Newsletter</a>
     </div>
 
-    <footer>
-      <p>BuildRadar · 由 GitHub Actions 每日自动生成</p>
-      <p>数据来源：Hacker News · GitHub Trending · Product Hunt · HuggingFace · Google Trends · Reddit</p>
-    </footer>
-  </div>
+    <div class="platforms">
+      <div class="label">DATA SOURCES · 6 PLATFORMS</div>
+      <div class="row">
+        <span class="chip hn"><span class="swatch"></span>Hacker News</span>
+        <span class="chip gh"><span class="swatch"></span>GitHub Trending</span>
+        <span class="chip ph"><span class="swatch"></span>Product Hunt</span>
+        <span class="chip hf"><span class="swatch"></span>HuggingFace</span>
+        <span class="chip gt"><span class="swatch"></span>Google Trends</span>
+        <span class="chip rd"><span class="swatch"></span>Reddit</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section container" id="latest">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">DAILY REPORTS</div>
+        <h2 class="section-title">每日趋势报告</h2>
+      </div>
+      <p class="section-desc">每条信号都来自跨平台交叉验证，附数据点与构建建议。</p>
+    </div>
+
+      <div class="reports single" id="archive">
+        <a class="report-card" href="reports/2026-04-17.html" onmousemove="this.style.setProperty('--mx', (event.offsetX)+'px')">
+          <div>
+            <div class="meta" style="margin-bottom:14px;">
+              <span class="featured-badge">★ 最新报告 · 2026-04-17</span>
+            </div>
+            <h3>BuildRadar Daily — 2026-04-17</h3>
+            <p class="summary" style="margin-top:14px;">BuildRadar Daily — 2026-04-17 ⚠️ 未检测到 ANTHROPIC_API_KEY ，本报告为离线兜底版本，仅展示原始数据骨架，未做 LLM 交叉分析。 🔥 今日 3 大信号 无法生成（需要 Claude API）。 🛠 本周该构建什么 无法生成（需要 Claude API）。 📊 信号雷达 平台 项目/话题 热度指标 趋势 HN Claude Opus 4.7 1199 points 🔺 HN Qwen3.…</p>
+            <div class="tags" style="margin-top:18px;">
+              <span class="tag">HN</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">HuggingFace</span>
+              <span class="tag">Reddit</span>
+            </div>
+          </div>
+          <div class="right-col">
+            <div class="big-arrow">→</div>
+          </div>
+        </a>
+      </div>
+  </section>
+
+  <section class="section container" id="features">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">WHY BUILDRADAR</div>
+        <h2 class="section-title">不是新闻摘要，<br/>是行动清单。</h2>
+      </div>
+      <p class="section-desc">把 6 个平台的噪音压缩成 3 条强信号 + 1 个可立刻动手的产品想法。</p>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>每天 5 分钟</h3>
+        <p>一封简洁的邮件，3 条强信号 + 1 个构建建议，省掉你刷 HN、GitHub、Reddit 的两小时。</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>6 平台交叉验证</h3>
+        <p>只有同时在 2+ 平台出现的话题才会被标为强信号。把幸存者偏差和单源噪音过滤掉。</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>可执行优先</h3>
+        <p>每个发现都回答「我能用这个做什么」：MVP 范围、技术栈、目标用户、第一批用户从哪来。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="cta-banner">
+      <h3>把开发者趋势放进你的邮箱。</h3>
+      <p>每天早上一份。免费、无广告、可随时退订。</p>
+      <a class="btn btn-primary" href="https://buttondown.com/buildradar" target="_blank" rel="noopener">
+        订阅 Newsletter
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container row">
+      <div>
+        <div class="brand" style="margin-bottom:6px;">
+          <span class="logo"></span>
+          <span class="name">BuildRadar</span>
+        </div>
+        <div>由 GitHub Actions 每日自动生成 · MIT</div>
+      </div>
+      <div class="links">
+<a href="https://github.com/yourusername/buildradar" target="_blank" rel="noopener">GitHub</a>        <a href="https://buttondown.com/buildradar" target="_blank" rel="noopener">Newsletter</a>
+        <a href="subscribe.html">订阅说明</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

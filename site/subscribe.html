@@ -3,62 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>订阅 BuildRadar</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%2358a6ff%22/><text x=%2250%25%22 y=%2256%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22700%22 font-size=%2234%22 fill=%22%230d1117%22>BR</text></svg>" />
+  <title>订阅 BuildRadar · 每天 5 分钟，知道该构建什么</title>
+  <meta name="theme-color" content="#0a0a0f" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%237c5cff%22/><stop offset=%221%22 stop-color=%22%2300d4ff%22/></linearGradient></defs><rect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22url(%23g)%22/><circle cx=%2232%22 cy=%2232%22 r=%2222%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-opacity=%220.35%22 stroke-width=%222%22/><circle cx=%2232%22 cy=%2232%22 r=%2212%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-opacity=%220.6%22 stroke-width=%222%22/><circle cx=%2232%22 cy=%2232%22 r=%224%22 fill=%22%23ffffff%22/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0d1117;
-      --panel:#161b22;
-      --border:#30363d;
-      --fg:#e6edf3;
-      --muted:#8b949e;
-      --accent:#58a6ff;
+      --bg:#0a0a0f;
+      --panel:rgba(255,255,255,0.04);
+      --panel-2:rgba(255,255,255,0.06);
+      --border:rgba(255,255,255,0.08);
+      --border-strong:rgba(255,255,255,0.16);
+      --fg:#f5f5f7;
+      --fg-2:#cfcfd6;
+      --muted:#8a8a96;
+      --accent:#7c5cff;
+      --accent-2:#00d4ff;
+      --accent-3:#ff6ec7;
+      --good:#3fe0a0;
     }
     *{box-sizing:border-box;}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",ui-sans-serif,sans-serif;line-height:1.7;}
-    a{color:var(--accent);text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .container{max-width:640px;margin:0 auto;padding:64px 24px 96px;text-align:center;}
-    h1{font-size:36px;margin:0 0 12px;letter-spacing:-0.5px;}
-    .tagline{color:var(--muted);font-size:16px;margin:0 0 40px;}
-    .features{text-align:left;margin:32px 0;display:grid;gap:16px;}
-    .feature{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:20px 22px;}
-    .feature h3{margin:0 0 6px;font-size:16px;}
-    .feature p{margin:0;color:var(--muted);font-size:14px;}
-    form.sub{margin-top:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;}
-    form.sub input[type=email]{flex:1;min-width:220px;padding:12px 14px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--fg);font-size:14px;}
-    form.sub input[type=email]:focus{outline:none;border-color:var(--accent);}
-    form.sub button{padding:12px 22px;border-radius:8px;border:none;background:var(--accent);color:#0d1117;font-weight:700;cursor:pointer;font-size:14px;}
-    form.sub button:hover{opacity:0.9;}
-    .back{display:inline-block;margin-top:36px;color:var(--muted);}
+    body{
+      margin:0;padding:0;background:var(--bg);color:var(--fg);
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei','Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;
+      font-feature-settings:'cv11','ss01','ss03';
+      -webkit-font-smoothing:antialiased;line-height:1.6;
+      min-height:100vh;display:flex;flex-direction:column;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none;}
+
+    .bg-fx{
+      position:fixed;inset:0;z-index:-1;pointer-events:none;
+      background:
+        radial-gradient(60vw 60vw at 15% -10%, rgba(124,92,255,0.20), transparent 60%),
+        radial-gradient(50vw 50vw at 110% 10%, rgba(0,212,255,0.16), transparent 55%),
+        radial-gradient(50vw 50vw at 80% 100%, rgba(255,110,199,0.10), transparent 55%),
+        var(--bg);
+    }
+    .bg-grid{
+      position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.35;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    }
+
+    nav.top{
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      background:rgba(10,10,15,0.55);
+      border-bottom:1px solid var(--border);
+    }
+    nav.top .inner{
+      max-width:1100px;margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 24px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-0.02em;}
+    .brand .logo{
+      width:32px;height:32px;border-radius:9px;
+      background:conic-gradient(from 220deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+      position:relative;display:grid;place-items:center;
+      box-shadow:0 8px 24px -8px rgba(124,92,255,0.55);
+    }
+    .brand .logo::before{content:"";position:absolute;inset:3px;border-radius:7px;background:#0a0a0f;}
+    .brand .logo::after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 10px rgba(255,255,255,0.7);}
+    nav.top .back{font-size:14px;color:var(--muted);}
+    nav.top .back:hover{color:var(--fg);}
+
+    main{flex:1;display:flex;align-items:center;justify-content:center;padding:64px 24px;}
+    .wrap{
+      width:100%;max-width:560px;text-align:center;
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 14px;border-radius:999px;
+      background:var(--panel);border:1px solid var(--border-strong);
+      font-size:13px;color:var(--fg-2);
+      font-family:'JetBrains Mono',ui-monospace,monospace;
+    }
+    .badge .dot{
+      width:7px;height:7px;border-radius:50%;background:var(--good);
+      box-shadow:0 0 0 4px rgba(63,224,160,0.15);
+    }
+    h1{
+      font-size: clamp(36px, 6vw, 56px);
+      line-height:1.05;font-weight:800;letter-spacing:-0.03em;
+      margin:20px 0 14px;
+    }
+    h1 em{
+      font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;
+      background: linear-gradient(120deg, var(--accent), var(--accent-2) 50%, var(--accent-3));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .lead{color:var(--fg-2);font-size:17px;max-width:48ch;margin:0 auto 36px;}
+
+    .features{
+      display:grid;gap:14px;margin:32px 0;text-align:left;
+    }
+    .feature{
+      padding:18px 20px;border-radius:14px;
+      background:var(--panel);border:1px solid var(--border);
+      display:flex;align-items:flex-start;gap:14px;
+    }
+    .feature .icon{
+      flex-shrink:0;
+      width:36px;height:36px;border-radius:10px;
+      background: linear-gradient(135deg, rgba(124,92,255,0.20), rgba(0,212,255,0.20));
+      border:1px solid rgba(124,92,255,0.3);
+      display:grid;place-items:center;color:var(--accent-2);
+    }
+    .feature .text strong{font-size:15px;font-weight:600;display:block;margin-bottom:2px;}
+    .feature .text span{font-size:13px;color:var(--muted);}
+
+    form.sub{
+      display:flex;gap:8px;margin:8px 0 14px;
+    }
+    form.sub input[type=email]{
+      flex:1;padding:14px 16px;
+      border-radius:12px;border:1px solid var(--border-strong);
+      background:rgba(255,255,255,0.03);color:var(--fg);
+      font-size:15px;font-family:inherit;
+      transition: border-color .2s ease, background .2s ease;
+    }
+    form.sub input[type=email]:focus{
+      outline:none;border-color:var(--accent-2);background:rgba(255,255,255,0.06);
+    }
+    form.sub input[type=email]::placeholder{color:var(--muted);}
+    form.sub button{
+      padding:14px 22px;border-radius:12px;border:none;
+      background:linear-gradient(120deg, var(--accent), var(--accent-2));
+      color:#0a0a0f;font-weight:700;font-size:15px;cursor:pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 14px 40px -14px rgba(124,92,255,0.7);
+    }
+    form.sub button:hover{transform:translateY(-2px);box-shadow:0 22px 50px -16px rgba(124,92,255,0.85);}
+    .hint{font-size:12px;color:var(--muted);}
+
+    footer{
+      padding:24px;text-align:center;color:var(--muted);font-size:13px;
+      border-top:1px solid var(--border);
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>BuildRadar</h1>
-    <p class="tagline">每天 5 分钟，知道该构建什么</p>
+  <div class="bg-fx"></div>
+  <div class="bg-grid"></div>
 
-    <div class="features">
-      <div class="feature">
-        <h3>🕐 每天 5 分钟</h3>
-        <p>一封简洁的邮件，3 大信号 + 1 个构建建议，省掉你刷 HN、GitHub、Reddit 的时间。</p>
-      </div>
-      <div class="feature">
-        <h3>🎯 6 个平台交叉验证</h3>
-        <p>Hacker News、GitHub Trending、Product Hunt、HuggingFace、Google Trends、Reddit。只有多平台同时出现的信号才会被标为"强信号"。</p>
-      </div>
-      <div class="feature">
-        <h3>🛠 可执行的构建建议</h3>
-        <p>不是新闻摘要，是给独立开发者的行动清单。做什么、为什么、怎么验证，一步到位。</p>
+  <nav class="top">
+    <div class="inner">
+      <a class="brand" href="index.html">
+        <span class="logo"></span>
+        <span style="font-size:15px;">BuildRadar</span>
+      </a>
+      <a class="back" href="index.html">← 返回首页</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <span class="badge"><span class="dot"></span>已有开发者订阅</span>
+      <h1>把开发者趋势<br/><em>每天</em> 装进邮箱。</h1>
+      <p class="lead">每天 5 分钟，知道该构建什么。每天 5 分钟，3 条强信号 + 1 个可执行构建建议。</p>
+
+      <form class="sub" action="https://buttondown.com/buildradar/subscribe" method="post">
+        <input type="email" name="email" placeholder="your@email.com" required />
+        <button type="submit">订阅</button>
+      </form>
+      <div class="hint">免费、无广告、可随时退订。</div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="text">
+            <strong>每天 5 分钟</strong>
+            <span>一封简洁的邮件，省掉刷 HN、GitHub、Reddit 的两小时。</span>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="text">
+            <strong>6 平台交叉验证</strong>
+            <span>HN · GitHub · Product Hunt · HuggingFace · Google Trends · Reddit。</span>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="text">
+            <strong>可执行的构建建议</strong>
+            <span>不是新闻摘要，是给独立开发者的行动清单：MVP、技术栈、用户从哪来。</span>
+          </div>
+        </div>
       </div>
     </div>
+  </main>
 
-    <form class="sub" action="https://buttondown.com/buildradar/subscribe" method="post">
-      <input type="email" name="email" placeholder="your@email.com" required />
-      <button type="submit">免费订阅</button>
-    </form>
-
-    <a class="back" href="index.html">← 返回首页</a>
-  </div>
+  <footer>
+    BuildRadar · 由 GitHub Actions 每日自动生成
+  </footer>
 </body>
 </html>

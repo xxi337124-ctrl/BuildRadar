@@ -5,60 +5,281 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ report.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ report.summary }}" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%2358a6ff%22/><text x=%2250%25%22 y=%2256%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22700%22 font-size=%2234%22 fill=%22%230d1117%22>BR</text></svg>" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%237c5cff%22/><stop offset=%221%22 stop-color=%22%2300d4ff%22/></linearGradient></defs><rect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22url(%23g)%22/><circle cx=%2232%22 cy=%2232%22 r=%2222%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-opacity=%220.35%22 stroke-width=%222%22/><circle cx=%2232%22 cy=%2232%22 r=%2212%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-opacity=%220.6%22 stroke-width=%222%22/><circle cx=%2232%22 cy=%2232%22 r=%224%22 fill=%22%23ffffff%22/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0d1117;
-      --panel:#161b22;
-      --border:#30363d;
-      --fg:#e6edf3;
-      --muted:#8b949e;
-      --accent:#58a6ff;
-      --accent2:#3fb950;
+      --bg:#0a0a0f;
+      --panel:rgba(255,255,255,0.04);
+      --panel-2:rgba(255,255,255,0.06);
+      --border:rgba(255,255,255,0.08);
+      --border-strong:rgba(255,255,255,0.16);
+      --fg:#f5f5f7;
+      --fg-2:#cfcfd6;
+      --muted:#8a8a96;
+      --accent:#7c5cff;
+      --accent-2:#00d4ff;
+      --accent-3:#ff6ec7;
+      --good:#3fe0a0;
+      --warn:#ffb454;
+      --bad:#ff5d6c;
+      --radius:16px;
+      --radius-sm:10px;
     }
     *{box-sizing:border-box;}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",ui-sans-serif,sans-serif;line-height:1.75;}
-    a{color:var(--accent);text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .container{max-width:760px;margin:0 auto;padding:32px 24px 96px;}
-    .nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:32px;}
-    .nav a.back{color:var(--muted);font-size:14px;}
-    .nav a.back:hover{color:var(--accent);text-decoration:none;}
-    .report-date{color:var(--muted);font-size:13px;margin-top:4px;letter-spacing:1px;}
-    article{font-size:16px;}
-    article h1{font-size:30px;margin:20px 0 8px;letter-spacing:-0.5px;}
-    article h2{font-size:22px;margin-top:42px;padding-bottom:6px;border-bottom:1px solid var(--border);}
-    article h3{font-size:18px;margin-top:28px;color:var(--fg);}
-    article p{margin:12px 0;}
-    article ul,article ol{padding-left:24px;}
-    article li{margin:6px 0;}
-    article blockquote{border-left:3px solid var(--accent);margin:16px 0;padding:4px 16px;color:var(--muted);background:var(--panel);border-radius:0 6px 6px 0;}
-    article code{background:#1f2937;padding:2px 6px;border-radius:4px;font-size:0.9em;font-family:"SF Mono","JetBrains Mono",ui-monospace,"Menlo",monospace;}
-    article pre{background:var(--panel);border:1px solid var(--border);padding:14px 16px;border-radius:8px;overflow-x:auto;}
-    article pre code{background:transparent;padding:0;}
-    article table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14px;display:block;overflow-x:auto;}
-    article table th,article table td{border:1px solid var(--border);padding:8px 12px;text-align:left;}
-    article table th{background:var(--panel);color:var(--fg);}
-    article table tr:nth-child(even) td{background:rgba(255,255,255,0.02);}
-    article hr{border:none;border-top:1px solid var(--border);margin:32px 0;}
-    .cta-box{margin-top:48px;padding:24px;border:1px solid var(--border);background:var(--panel);border-radius:10px;text-align:center;}
-    .cta-box h3{margin:0 0 8px;font-size:18px;}
-    .cta-box p{color:var(--muted);margin:0 0 16px;}
-    .cta{display:inline-block;background:var(--accent);color:#0d1117;font-weight:600;padding:10px 18px;border-radius:6px;}
-    .cta:hover{text-decoration:none;opacity:0.9;}
-    .pager{display:flex;justify-content:space-between;margin-top:40px;gap:12px;}
-    .pager a{flex:1;padding:14px;background:var(--panel);border:1px solid var(--border);border-radius:8px;color:var(--muted);font-size:13px;}
-    .pager a:hover{border-color:var(--accent);color:var(--fg);text-decoration:none;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;padding:0;background:var(--bg);color:var(--fg);
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei','Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;
+      font-feature-settings:'cv11','ss01','ss03';
+      -webkit-font-smoothing:antialiased;
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+    a{color:var(--accent-2);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s ease;}
+    a:hover{border-color:var(--accent-2);}
+
+    .bg-fx{
+      position:fixed;inset:0;z-index:-1;pointer-events:none;
+      background:
+        radial-gradient(50vw 40vw at 100% -10%, rgba(124,92,255,0.14), transparent 60%),
+        radial-gradient(50vw 40vw at 0% 100%, rgba(0,212,255,0.10), transparent 60%),
+        var(--bg);
+    }
+
+    /* Top nav */
+    nav.top{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      background:rgba(10,10,15,0.55);
+      border-bottom:1px solid var(--border);
+    }
+    nav.top .inner{
+      max-width:760px;margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 24px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-0.02em;}
+    .brand .logo{
+      width:30px;height:30px;border-radius:9px;
+      background:conic-gradient(from 220deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+      position:relative;display:grid;place-items:center;
+      box-shadow:0 8px 24px -8px rgba(124,92,255,0.55);
+    }
+    .brand .logo::before{content:"";position:absolute;inset:3px;border-radius:7px;background:#0a0a0f;}
+    .brand .logo::after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 10px rgba(255,255,255,0.7);}
+    .back{font-size:14px;color:var(--muted);border:none;display:inline-flex;align-items:center;gap:6px;}
+    .back:hover{color:var(--fg);}
+    .top-cta{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:7px 14px;border-radius:999px;
+      background:var(--fg);color:#0a0a0f;
+      font-size:13px;font-weight:600;border:none;
+    }
+    .top-cta:hover{border:none;}
+
+    .container{max-width:760px;margin:0 auto;padding:0 24px;}
+
+    /* 报告标题区 */
+    .report-hero{
+      padding:56px 0 28px;
+      border-bottom:1px solid var(--border);
+      margin-bottom:36px;
+    }
+    .report-hero .crumbs{
+      font-family:'JetBrains Mono',ui-monospace,monospace;
+      font-size:12px;color:var(--accent-2);letter-spacing:0.16em;text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    .report-hero h1{
+      font-size: clamp(30px, 4.6vw, 48px);
+      font-weight:800;letter-spacing:-0.03em;line-height:1.12;
+      margin:0 0 16px;
+      word-break:keep-all;
+      overflow-wrap:break-word;
+    }
+    .report-hero .meta{
+      display:flex;flex-wrap:wrap;align-items:center;gap:14px;color:var(--muted);font-size:14px;
+    }
+    .report-hero .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted);}
+
+    /* 文章排版 */
+    article{font-size:17px;color:var(--fg);}
+    article > h1{display:none;} /* MD 里第一个 H1 重复，隐藏 */
+    article h2{
+      font-size:26px;font-weight:700;letter-spacing:-0.02em;
+      margin:56px 0 18px;
+      padding-bottom:14px;
+      border-bottom:1px solid var(--border);
+      display:flex;align-items:center;gap:10px;
+    }
+    article h3{
+      font-size:20px;font-weight:600;letter-spacing:-0.015em;
+      margin:36px 0 14px;color:var(--fg);
+    }
+    article p{margin:14px 0;color:var(--fg-2);}
+    article strong{color:var(--fg);font-weight:600;}
+    article ul, article ol{padding-left:22px;margin:14px 0;}
+    article ul li, article ol li{margin:8px 0;color:var(--fg-2);}
+    article ul li::marker{color:var(--accent-2);}
+
+    article blockquote{
+      margin:20px 0;padding:16px 20px;
+      border-left:3px solid var(--accent);
+      background: linear-gradient(90deg, rgba(124,92,255,0.08), transparent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color:var(--fg-2);
+    }
+    article blockquote p{margin:6px 0;}
+
+    article code{
+      background:rgba(255,255,255,0.06);
+      border:1px solid var(--border);
+      padding:2px 7px;border-radius:6px;
+      font-size:0.9em;
+      font-family:'JetBrains Mono',ui-monospace,'Menlo',monospace;
+      color:var(--accent-2);
+    }
+    article pre{
+      background:#0e0e16;
+      border:1px solid var(--border-strong);
+      padding:18px 20px;border-radius:var(--radius);
+      overflow-x:auto;margin:18px 0;
+      font-size:14px;
+    }
+    article pre code{background:transparent;padding:0;border:none;color:var(--fg-2);}
+
+    /* 表格：信号雷达 */
+    article table{
+      width:100%;border-collapse:separate;border-spacing:0;
+      margin:24px 0;font-size:14px;
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      display:block;overflow-x:auto;
+    }
+    article table thead{background:rgba(255,255,255,0.04);}
+    article table th{
+      text-align:left;padding:14px 16px;
+      font-weight:600;color:var(--fg);
+      font-size:12px;letter-spacing:0.06em;text-transform:uppercase;
+      border-bottom:1px solid var(--border);
+      white-space:nowrap;
+    }
+    article table td{
+      padding:13px 16px;
+      border-bottom:1px solid var(--border);
+      color:var(--fg-2);
+    }
+    article table tr:last-child td{border-bottom:none;}
+    article table tr:hover td{background:rgba(255,255,255,0.025);}
+    article table td:first-child{
+      font-family:'JetBrains Mono',ui-monospace,monospace;
+      font-size:12px;color:var(--accent-2);
+      white-space:nowrap;
+    }
+
+    article hr{border:none;border-top:1px solid var(--border);margin:40px 0;}
+
+    /* 信号强度星标可视化（Markdown 中的 ★ 字符） */
+    /* 引导段落（>） 已用 blockquote 优化 */
+
+    /* 上下篇 */
+    .pager{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px;
+      margin-top:48px;
+    }
+    @media (max-width:600px){.pager{grid-template-columns:1fr;}}
+    .pager a{
+      padding:18px 20px;border-radius:var(--radius);
+      background:var(--panel);border:1px solid var(--border);
+      color:var(--fg-2);font-size:14px;
+      transition: all .2s ease;
+      display:block;
+    }
+    .pager a:hover{
+      border-color:var(--border-strong);
+      color:var(--fg);
+      transform:translateY(-2px);
+      border-bottom:1px solid var(--border-strong);
+    }
+    .pager a .label{
+      font-family:'JetBrains Mono',ui-monospace,monospace;
+      font-size:11px;color:var(--muted);
+      letter-spacing:0.12em;text-transform:uppercase;
+      margin-bottom:6px;display:block;
+    }
     .pager a.next{text-align:right;}
-    footer{margin-top:64px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px;}
+
+    /* CTA */
+    .cta-box{
+      margin:56px 0 0;
+      padding:36px;
+      border-radius:22px;
+      background:
+        radial-gradient(80% 120% at 0% 0%, rgba(124,92,255,0.20), transparent 60%),
+        radial-gradient(80% 120% at 100% 100%, rgba(0,212,255,0.18), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border:1px solid var(--border-strong);
+      text-align:center;
+    }
+    .cta-box h3{
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight:700;letter-spacing:-0.02em;margin:0 0 8px;
+    }
+    .cta-box p{color:var(--fg-2);margin:0 0 20px;font-size:15px;}
+    .btn-primary{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:13px 22px;border-radius:12px;
+      background:linear-gradient(120deg, var(--accent), var(--accent-2));
+      color:#0a0a0f !important;
+      font-weight:600;font-size:15px;border:none;
+    }
+    .btn-primary:hover{border:none;}
+    .btn-primary .arrow{transition:transform .2s ease;}
+    .btn-primary:hover .arrow{transform:translateX(3px);}
+
+    footer{
+      padding:48px 0 56px;margin-top:60px;
+      border-top:1px solid var(--border);
+      color:var(--muted);font-size:13px;text-align:center;
+    }
+
+    /* 段落选中色 */
+    ::selection{background:rgba(124,92,255,0.4);color:#fff;}
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="nav">
-      <a class="back" href="../index.html">← 返回首页</a>
-      <span class="report-date">{{ report.date }}</span>
+  <div class="bg-fx"></div>
+
+  <nav class="top">
+    <div class="inner">
+      <a class="brand" href="../index.html">
+        <span class="logo"></span>
+        <span style="font-size:15px;">BuildRadar</span>
+      </a>
+      <a class="back" href="../index.html">← 全部报告</a>
+      <a class="top-cta" href="{{ site.newsletter_url }}" target="_blank" rel="noopener">订阅</a>
     </div>
+  </nav>
+
+  <div class="container">
+    <header class="report-hero">
+      <div class="crumbs">DAILY REPORT · {{ report.date }}</div>
+      <h1>{{ report.title }}</h1>
+      <div class="meta">
+        <span>📡 6 个数据源</span>
+        <span class="dot"></span>
+        <span>🤖 LLM 交叉分析</span>
+        <span class="dot"></span>
+        <span>⏱ 阅读约 5 分钟</span>
+      </div>
+    </header>
 
     <article>
       {{ report.body_html | safe }}
@@ -66,21 +287,25 @@
 
     <div class="pager">
       {% if prev_report %}
-        <a class="prev" href="{{ prev_report.slug }}.html">← 更早：{{ prev_report.date }}</a>
-      {% else %}
-        <span></span>
-      {% endif %}
+        <a class="prev" href="{{ prev_report.slug }}.html">
+          <span class="label">← 更早</span>
+          <strong>{{ prev_report.date }}</strong>
+        </a>
+      {% else %}<span></span>{% endif %}
       {% if next_report %}
-        <a class="next" href="{{ next_report.slug }}.html">更新：{{ next_report.date }} →</a>
-      {% else %}
-        <span></span>
-      {% endif %}
+        <a class="next" href="{{ next_report.slug }}.html">
+          <span class="label">更新 →</span>
+          <strong>{{ next_report.date }}</strong>
+        </a>
+      {% else %}<span></span>{% endif %}
     </div>
 
     <div class="cta-box">
       <h3>每天 5 分钟，知道该构建什么</h3>
-      <p>BuildRadar 每天自动采集 6 个平台的开发者信号，用 LLM 交叉分析，帮你发现真正值得做的事。</p>
-      <a class="cta" href="{{ site.newsletter_url }}">免费订阅 Newsletter</a>
+      <p>免费订阅，每天早上一份直送邮箱。无广告、可随时退订。</p>
+      <a class="btn-primary" href="{{ site.newsletter_url }}" target="_blank" rel="noopener">
+        订阅 Newsletter <span class="arrow">→</span>
+      </a>
     </div>
 
     <footer>
