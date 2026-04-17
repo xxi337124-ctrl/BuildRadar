@@ -25,6 +25,14 @@ from collectors.huggingface import HuggingFaceCollector
 from collectors.google_trends import GoogleTrendsCollector
 from collectors.reddit import RedditCollector
 from analyzer.report_generator import ReportGenerator, build_mock_report
+from analyzer.signal_scorer import score_signals
+from analyzer.opportunity_extractor import extract_opportunities
+from analyzer.signal_history import (
+    load_signal_history,
+    update_signal_history,
+    compute_trends,
+    previous_reports_summary,
+)
 from publisher.markdown_writer import save_report, save_raw_data, report_exists
 from publisher.site_builder import build_site
 
@@ -187,28 +195,60 @@ def main() -> int:
     raw_path = save_raw_data(today, raw_data)
     print(f"  ✓ Raw data saved -> {raw_path}")
 
-    # 3. 生成报告
+    # 3. 信号评分（纯 Python，不依赖 LLM）
+    print("  Scoring signals (cross-platform)...")
+    signals = score_signals(raw_data, min_grade="B", max_signals=30)
+    grade_counts: Dict[str, int] = {}
+    for s in signals:
+        grade_counts[s["grade"]] = grade_counts.get(s["grade"], 0) + 1
+    print(f"  ✓ {len(signals)} signals (B+): " + ", ".join(
+        f"{g}={c}" for g, c in sorted(grade_counts.items())
+    ))
+
+    # 4. 机会原材料提取
+    print("  Extracting opportunity raw materials...")
+    opportunities = extract_opportunities(raw_data, signals)
+    print("  ✓ opportunities: " + ", ".join(
+        f"{k}={len(v)}" for k, v in opportunities.items()
+    ))
+
+    # 5. 读取历史信号 → 计算趋势变化 → 上周回顾素材
+    history = load_signal_history()
+    trends = compute_trends(signals, history, today, lookback_days=7)
+    last_week = previous_reports_summary(history, today, lookback_days=7, max_per_day=3)
+
+    # 6. 生成报告
     print("  Generating report...")
     use_llm = not args.skip_llm and bool(get_env("ANTHROPIC_API_KEY"))
     if use_llm:
         try:
             generator = ReportGenerator()
-            report_md = generator.generate(today, raw_data)
+            report_md = generator.generate(
+                date=today,
+                signals=signals,
+                opportunities=opportunities,
+                trends=trends,
+                last_week=last_week,
+            )
         except Exception as e:
             print(f"  ✗ LLM generation failed: {e}")
-            print("  Falling back to offline mock report...")
-            report_md = build_mock_report(today, raw_data)
+            print("  Falling back to rule-engine mock report...")
+            report_md = build_mock_report(today, signals, opportunities, trends, last_week)
     else:
         if args.skip_llm:
-            print("  --skip-llm specified; using offline mock report.")
+            print("  --skip-llm specified; using rule-engine mock report.")
         else:
-            print("  ANTHROPIC_API_KEY not set; using offline mock report.")
-        report_md = build_mock_report(today, raw_data)
+            print("  ANTHROPIC_API_KEY not set; using rule-engine mock report.")
+        report_md = build_mock_report(today, signals, opportunities, trends, last_week)
 
     report_path = save_report(today, report_md)
     print(f"  ✓ Report saved -> {report_path}")
 
-    # 4. 构建静态网站
+    # 7. 更新信号历史（在保存报告之后，确保报告生成成功才追加）
+    update_signal_history(today, signals)
+    print("  ✓ Signal history updated -> data/signals.json")
+
+    # 8. 构建静态网站
     print("  Building site...")
     build_site()
     print("  ✓ Site built")
