@@ -466,5 +466,29 @@
       "type": "opportunity",
       "top_score": 3346
     }
+  ],
+  "2026-05-02": [
+    {
+      "signal_id": "skills-a658279f",
+      "primary_keyword": "skills",
+      "keywords": [
+        "skills"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 3645
+    },
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    }
   ]
 }
