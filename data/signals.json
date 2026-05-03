@@ -490,5 +490,51 @@
       "type": "opportunity",
       "top_score": 3346
     }
+  ],
+  "2026-05-03": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1299
+    },
+    {
+      "signal_id": "ai-agent-1d72e998",
+      "primary_keyword": "ai agent",
+      "keywords": [
+        "ai agent"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1299
+    },
+    {
+      "signal_id": "kimi-aacfa66c",
+      "primary_keyword": "kimi",
+      "keywords": [
+        "kimi"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 122
+    }
   ]
 }
