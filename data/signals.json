@@ -1203,5 +1203,40 @@
       "type": "rising_tool",
       "top_score": 352
     }
+  ],
+  "2026-05-24": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "lance-3573c6ef",
+      "primary_keyword": "lance",
+      "keywords": [
+        "lance"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 715
+    },
+    {
+      "signal_id": "art-2c5f64ab",
+      "primary_keyword": "art",
+      "keywords": [
+        "art"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 256
+    }
   ]
 }
