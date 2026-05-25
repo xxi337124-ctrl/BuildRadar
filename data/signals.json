@@ -1238,5 +1238,40 @@
       "type": "rising_tool",
       "top_score": 256
     }
+  ],
+  "2026-05-25": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3999
+    },
+    {
+      "signal_id": "ai-agent-1d72e998",
+      "primary_keyword": "ai agent",
+      "keywords": [
+        "ai agent"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 3003
+    },
+    {
+      "signal_id": "pi-72ab8af5",
+      "primary_keyword": "pi",
+      "keywords": [
+        "pi"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 456
+    }
   ]
 }
