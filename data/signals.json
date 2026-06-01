@@ -1450,5 +1450,29 @@
       "type": "opportunity",
       "top_score": 3346
     }
+  ],
+  "2026-06-01": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "openai-codex-788c25f0",
+      "primary_keyword": "openai codex",
+      "keywords": [
+        "openai codex"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 937
+    }
   ]
 }
