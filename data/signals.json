@@ -1520,5 +1520,29 @@
       "type": "rising_tool",
       "top_score": 945
     }
+  ],
+  "2026-06-03": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "deepseek-v4-flash-3d4ba6ae",
+      "primary_keyword": "deepseek-v4-flash",
+      "keywords": [
+        "deepseek-v4-flash"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1373
+    }
   ]
 }
