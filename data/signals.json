@@ -1638,5 +1638,51 @@
       "type": "rising_tool",
       "top_score": 120
     }
+  ],
+  "2026-06-07": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "ai-4921c0e2",
+      "primary_keyword": "ai",
+      "keywords": [
+        "ai"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 546
+    },
+    {
+      "signal_id": "openai-codex-788c25f0",
+      "primary_keyword": "openai codex",
+      "keywords": [
+        "openai codex"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 209
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 193
+    }
   ]
 }
