@@ -1708,5 +1708,40 @@
       "type": "opportunity",
       "top_score": 1392
     }
+  ],
+  "2026-06-09": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "durable-1759f188",
+      "primary_keyword": "durable",
+      "keywords": [
+        "durable"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 1392
+    },
+    {
+      "signal_id": "ai-4921c0e2",
+      "primary_keyword": "ai",
+      "keywords": [
+        "ai"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 523
+    }
   ]
 }
