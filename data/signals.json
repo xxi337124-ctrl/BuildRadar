@@ -2032,5 +2032,51 @@
       "type": "rising_tool",
       "top_score": 940
     }
+  ],
+  "2026-06-17": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "server-cf1e8c14",
+      "primary_keyword": "server",
+      "keywords": [
+        "server"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 1998
+    },
+    {
+      "signal_id": "openai-2c6ee24b",
+      "primary_keyword": "openai",
+      "keywords": [
+        "openai"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 202
+    },
+    {
+      "signal_id": "rust-72812e30",
+      "primary_keyword": "rust",
+      "keywords": [
+        "rust"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 72
+    }
   ]
 }
