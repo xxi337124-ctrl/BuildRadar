@@ -2078,5 +2078,62 @@
       "type": "opportunity",
       "top_score": 72
     }
+  ],
+  "2026-06-18": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "server-cf1e8c14",
+      "primary_keyword": "server",
+      "keywords": [
+        "server"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 1998
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1523
+    },
+    {
+      "signal_id": "glm-5-2-0b76d06e",
+      "primary_keyword": "glm-5.2",
+      "keywords": [
+        "glm-5.2"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1123
+    },
+    {
+      "signal_id": "deepseek-b6db407c",
+      "primary_keyword": "deepseek",
+      "keywords": [
+        "deepseek"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 441
+    }
   ]
 }
