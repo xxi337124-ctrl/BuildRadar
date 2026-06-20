@@ -2170,5 +2170,29 @@
       "type": "rising_tool",
       "top_score": 738
     }
+  ],
+  "2026-06-20": [
+    {
+      "signal_id": "glm-5-2-0b76d06e",
+      "primary_keyword": "glm-5.2",
+      "keywords": [
+        "glm-5.2"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1559
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 111
+    }
   ]
 }
