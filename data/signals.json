@@ -2493,5 +2493,29 @@
       "type": "rising_tool",
       "top_score": 2114
     }
+  ],
+  "2026-07-03": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "superpowers-e1c60ae5",
+      "primary_keyword": "superpowers",
+      "keywords": [
+        "superpowers"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 897
+    }
   ]
 }
