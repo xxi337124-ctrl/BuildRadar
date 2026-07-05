@@ -2541,5 +2541,51 @@
       "type": "rising_tool",
       "top_score": 2863
     }
+  ],
+  "2026-07-05": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "openai-codex-788c25f0",
+      "primary_keyword": "openai codex",
+      "keywords": [
+        "openai codex"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 718
+    },
+    {
+      "signal_id": "system-54b53072",
+      "primary_keyword": "system",
+      "keywords": [
+        "system"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 471
+    },
+    {
+      "signal_id": "book-821f0328",
+      "primary_keyword": "book",
+      "keywords": [
+        "book"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 443
+    }
   ]
 }
