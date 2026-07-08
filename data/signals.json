@@ -2646,5 +2646,40 @@
       "type": "rising_tool",
       "top_score": 779
     }
+  ],
+  "2026-07-08": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 2514
+    },
+    {
+      "signal_id": "herdr-823ce810",
+      "primary_keyword": "herdr",
+      "keywords": [
+        "herdr"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 683
+    }
   ]
 }
