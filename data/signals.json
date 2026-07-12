@@ -2808,5 +2808,29 @@
       "type": "rising_tool",
       "top_score": 806
     }
+  ],
+  "2026-07-12": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "iroh-fad4c1de",
+      "primary_keyword": "iroh",
+      "keywords": [
+        "iroh"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 175
+    }
   ]
 }
