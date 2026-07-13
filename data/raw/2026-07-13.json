@@ -1,0 +1,1249 @@
+{
+  "hackernews": {
+    "source": "hackernews",
+    "collected_at": "2026-07-13T14:11:25.549021+08:00",
+    "front_page": [
+      {
+        "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+        "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+        "points": 534,
+        "num_comments": 300,
+        "author": "systima",
+        "created_at": "2026-07-12T18:25:51Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48883275"
+      },
+      {
+        "title": "What xAI's Grok build CLI sends to xAI: A wire-level analysis",
+        "url": "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547",
+        "points": 443,
+        "num_comments": 167,
+        "author": "jhoho",
+        "created_at": "2026-07-12T01:09:50Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48877371"
+      },
+      {
+        "title": "I love LLMs, I hate hype",
+        "url": "https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html",
+        "points": 388,
+        "num_comments": 245,
+        "author": "therepanic",
+        "created_at": "2026-07-12T18:31:56Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48883343"
+      },
+      {
+        "title": "Ask HN: Add flag for AI-generated articles",
+        "url": "https://news.ycombinator.com/item?id=48886741",
+        "points": 379,
+        "num_comments": 201,
+        "author": "levkk",
+        "created_at": "2026-07-13T01:24:20Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48886741"
+      },
+      {
+        "title": "Vint Cerf, “father of the Internet”, is retiring",
+        "url": "https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/",
+        "points": 297,
+        "num_comments": 169,
+        "author": "compiler-guy",
+        "created_at": "2026-07-10T00:06:59Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48854168"
+      },
+      {
+        "title": "LARP – Revenue infrastructure for serious founders",
+        "url": "https://www.larp.website/",
+        "points": 202,
+        "num_comments": 42,
+        "author": "BerislavLopac",
+        "created_at": "2026-07-12T16:56:41Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48882569"
+      },
+      {
+        "title": "Tiny Emulators",
+        "url": "https://floooh.github.io/tiny8bit-preview/index.html",
+        "points": 202,
+        "num_comments": 12,
+        "author": "naves",
+        "created_at": "2026-07-12T20:23:05Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48884395"
+      },
+      {
+        "title": "GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years",
+        "url": "https://nebusec.ai/research/ionstack-part-2/",
+        "points": 195,
+        "num_comments": 68,
+        "author": "ranger_danger",
+        "created_at": "2026-07-08T16:53:58Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48834309"
+      },
+      {
+        "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
+        "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6",
+        "points": 180,
+        "num_comments": 70,
+        "author": "brryant",
+        "created_at": "2026-07-12T17:13:07Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48882716"
+      },
+      {
+        "title": "So you want to learn physics (second edition, 2021)",
+        "url": "https://www.susanrigetti.com/physics",
+        "points": 156,
+        "num_comments": 23,
+        "author": "azhenley",
+        "created_at": "2026-07-08T03:28:00Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48827126"
+      },
+      {
+        "title": "Cyberpunk Comics, Manga and Graphic Novels",
+        "url": "https://shellzine.net/cyberpunk-comics/",
+        "points": 137,
+        "num_comments": 37,
+        "author": "zdw",
+        "created_at": "2026-07-12T22:45:31Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48885643"
+      },
+      {
+        "title": "Why write code in 2026",
+        "url": "https://softwaredoug.com/blog/2026/07/09/write-code",
+        "points": 135,
+        "num_comments": 176,
+        "author": "softwaredoug",
+        "created_at": "2026-07-10T16:12:52Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48861923"
+      },
+      {
+        "title": "Why Vanilla JavaScript",
+        "url": "https://guseyn.com/html/posts/why-vanilla-js.html",
+        "points": 120,
+        "num_comments": 73,
+        "author": "guseyn",
+        "created_at": "2026-07-12T22:53:51Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48885705"
+      },
+      {
+        "title": "I Learned to Read Again",
+        "url": "https://substack.magazinenongrata.com/p/how-i-learned-to-read-again",
+        "points": 120,
+        "num_comments": 50,
+        "author": "georgex7",
+        "created_at": "2026-07-12T18:22:15Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48883238"
+      },
+      {
+        "title": "Ask HN: What Are You Working On? (July 2026)",
+        "url": "https://news.ycombinator.com/item?id=48884984",
+        "points": 118,
+        "num_comments": 371,
+        "author": "david927",
+        "created_at": "2026-07-12T21:26:41Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48884984"
+      },
+      {
+        "title": "Count Binface",
+        "url": "https://countbinface.com",
+        "points": 114,
+        "num_comments": 20,
+        "author": "mooreds",
+        "created_at": "2026-07-13T04:00:54Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48887753"
+      },
+      {
+        "title": "How we can reduce traffic congestion",
+        "url": "https://research.google/blog/the-power-of-collaboration-how-we-can-reduce-traffic-congestion/",
+        "points": 113,
+        "num_comments": 141,
+        "author": "raahelb",
+        "created_at": "2026-07-12T15:35:36Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48881967"
+      },
+      {
+        "title": "Automation Without Understanding",
+        "url": "https://arxiv.org/abs/2607.06377",
+        "points": 109,
+        "num_comments": 47,
+        "author": "root-parent",
+        "created_at": "2026-07-12T16:54:47Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48882554"
+      },
+      {
+        "title": "Against Usefulness",
+        "url": "https://www.motivenotes.ai/p/against-usefulness",
+        "points": 98,
+        "num_comments": 24,
+        "author": "supo",
+        "created_at": "2026-07-12T17:47:07Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48882956"
+      },
+      {
+        "title": "Mechanistic interpretability researchers applying causality theory to LLMs",
+        "url": "https://cacm.acm.org/news/can-we-understand-how-large-language-models-reason/",
+        "points": 94,
+        "num_comments": 67,
+        "author": "adunk",
+        "created_at": "2026-07-12T18:04:41Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48883090"
+      },
+      {
+        "title": "Designing and assembling my first PCB",
+        "url": "https://vilkeliskis.com/b/2026/0711.html",
+        "points": 87,
+        "num_comments": 33,
+        "author": "tadasv",
+        "created_at": "2026-07-12T22:56:56Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48885728"
+      },
+      {
+        "title": "Kode Dot Programmable pocket device for makers, pentesters and geeks",
+        "url": "https://kode.diy",
+        "points": 67,
+        "num_comments": 16,
+        "author": "iNic",
+        "created_at": "2026-07-12T21:27:29Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48884992"
+      }
+    ],
+    "show_hn": [
+      {
+        "title": "Show HN: This up votes itself",
+        "url": "http://news.ycombinator.com/vote?for=3742902&dir=up&whence=%6e%65%77%65%73%74",
+        "points": 3531,
+        "num_comments": 82,
+        "author": "olalonde",
+        "created_at": "2012-03-23T00:40:39Z",
+        "hn_url": "https://news.ycombinator.com/item?id=3742902"
+      },
+      {
+        "title": "Show HN: Gemini Pro 3 imagines the HN front page 10 years from now",
+        "url": "https://dosaygo-studio.github.io/hn-front-page-2035/news",
+        "points": 3346,
+        "num_comments": 965,
+        "author": "keepamovin",
+        "created_at": "2025-12-09T15:00:38Z",
+        "hn_url": "https://news.ycombinator.com/item?id=46205632"
+      },
+      {
+        "title": "Show HN: I made an open-source laptop from scratch",
+        "url": "https://www.byran.ee/posts/creation/",
+        "points": 3237,
+        "num_comments": 323,
+        "author": "Hello9999901",
+        "created_at": "2025-01-22T20:41:52Z",
+        "hn_url": "https://news.ycombinator.com/item?id=42797260"
+      },
+      {
+        "title": "Show HN: If YouTube had actual channels",
+        "url": "https://ytch.xyz",
+        "points": 2741,
+        "num_comments": 514,
+        "author": "hadisafa",
+        "created_at": "2024-08-14T15:10:06Z",
+        "hn_url": "https://news.ycombinator.com/item?id=41247023"
+      },
+      {
+        "title": "Show HN: A retro video game console I've been working on in my free time",
+        "url": "https://internalregister.github.io/2019/03/14/Homebrew-Console.html",
+        "points": 2690,
+        "num_comments": 210,
+        "author": "pkiller",
+        "created_at": "2019-03-14T20:25:03Z",
+        "hn_url": "https://news.ycombinator.com/item?id=19393279"
+      },
+      {
+        "title": "Show HN: Redbean – Single-file distributable web server",
+        "url": "https://justine.lol/redbean/index.html",
+        "points": 1998,
+        "num_comments": 249,
+        "author": "jart",
+        "created_at": "2021-02-26T03:33:56Z",
+        "hn_url": "https://news.ycombinator.com/item?id=26271117"
+      },
+      {
+        "title": "Show HN: Non.io, a Reddit-like platform Ive been working on for the last 4 years",
+        "url": "https://non.io",
+        "points": 1943,
+        "num_comments": 590,
+        "author": "jjcm",
+        "created_at": "2023-06-12T16:54:38Z",
+        "hn_url": "https://news.ycombinator.com/item?id=36296695"
+      },
+      {
+        "title": "Show HN: I may have created a new type of puzzle",
+        "url": "http://www.dogbunnypuzzle.com/",
+        "points": 1859,
+        "num_comments": 464,
+        "author": "drcode",
+        "created_at": "2022-09-18T04:37:58Z",
+        "hn_url": "https://news.ycombinator.com/item?id=32884467"
+      },
+      {
+        "title": "Show HN: I 3D scanned the interior of the Great Pyramid at Giza",
+        "url": "https://giza.mused.org/en/guided/266/inside-the-great-pyramid",
+        "points": 1752,
+        "num_comments": 280,
+        "author": "lukehollis",
+        "created_at": "2022-10-27T13:31:25Z",
+        "hn_url": "https://news.ycombinator.com/item?id=33357197"
+      },
+      {
+        "title": "Show HN: Web Design in 4 minutes",
+        "url": "http://jgthms.com/web-design-in-4-minutes/",
+        "points": 1624,
+        "num_comments": 152,
+        "author": "bbx",
+        "created_at": "2016-07-26T16:17:42Z",
+        "hn_url": "https://news.ycombinator.com/item?id=12166687"
+      },
+      {
+        "title": "Show HN: I made a site where you practice typing by retyping entire novels",
+        "url": "http://typelit.io",
+        "points": 1589,
+        "num_comments": 378,
+        "author": "Octouroboros",
+        "created_at": "2020-10-06T11:37:53Z",
+        "hn_url": "https://news.ycombinator.com/item?id=24696658"
+      },
+      {
+        "title": "Show HN: I got laid off from Meta and created a minor hit on Steam",
+        "url": "https://news.ycombinator.com/item?id=43186406",
+        "points": 1581,
+        "num_comments": 356,
+        "author": "newobj",
+        "created_at": "2025-02-26T18:19:05Z",
+        "hn_url": "https://news.ycombinator.com/item?id=43186406"
+      },
+      {
+        "title": "Show HN: Jmail – Google Suite for Epstein files",
+        "url": "https://www.jmail.world",
+        "points": 1557,
+        "num_comments": 363,
+        "author": "lukeigel",
+        "created_at": "2025-12-20T21:00:05Z",
+        "hn_url": "https://news.ycombinator.com/item?id=46339600"
+      },
+      {
+        "title": "Show HN: I'm an airline pilot – I built interactive graphs/globes of my flights",
+        "url": "https://jameshard.ing/pilot",
+        "points": 1539,
+        "num_comments": 197,
+        "author": "jamesharding",
+        "created_at": "2025-06-27T13:06:54Z",
+        "hn_url": "https://news.ycombinator.com/item?id=44396518"
+      },
+      {
+        "title": "Show HN: Airmash – Multiplayer Missile Warfare HTML5 Game",
+        "url": "https://airma.sh/",
+        "points": 1535,
+        "num_comments": 304,
+        "author": "fivesigma",
+        "created_at": "2017-12-10T16:23:16Z",
+        "hn_url": "https://news.ycombinator.com/item?id=15892066"
+      },
+      {
+        "title": "Show HN: Beeper Mini – iMessage client for Android",
+        "url": "https://www.beeper.com/",
+        "points": 1521,
+        "num_comments": 874,
+        "author": "erohead",
+        "created_at": "2023-12-05T15:06:21Z",
+        "hn_url": "https://news.ycombinator.com/item?id=38531759"
+      },
+      {
+        "title": "Show HN: Homebrew 6.0.0",
+        "url": "https://brew.sh/2026/06/11/homebrew-6.0.0/",
+        "points": 1481,
+        "num_comments": 363,
+        "author": "mikemcquaid",
+        "created_at": "2026-06-11T13:24:29Z",
+        "hn_url": "https://news.ycombinator.com/item?id=48490024"
+      },
+      {
+        "title": "Show HN: Can’t afford Bloomberg Terminal? No prob, I built the next best thing",
+        "url": "https://github.com/DidierRLopes/GamestonkTerminal",
+        "points": 1422,
+        "num_comments": 289,
+        "author": "sexy_year",
+        "created_at": "2021-02-25T01:47:30Z",
+        "hn_url": "https://news.ycombinator.com/item?id=26258773"
+      },
+      {
+        "title": "Show HN: GPT-4-powered web searches for developers",
+        "url": "https://www.phind.com",
+        "points": 1401,
+        "num_comments": 414,
+        "author": "rushingcreek",
+        "created_at": "2023-04-12T17:44:08Z",
+        "hn_url": "https://news.ycombinator.com/item?id=35543668"
+      },
+      {
+        "title": "Show HN: I built a Rotten Tomatoes-style platform for durable products",
+        "url": "https://www.buyforlifeproducts.com/",
+        "points": 1392,
+        "num_comments": 398,
+        "author": "hubraumhugo",
+        "created_at": "2020-10-07T12:14:38Z",
+        "hn_url": "https://news.ycombinator.com/item?id=24707407"
+      }
+    ],
+    "ask_hn": [
+      {
+        "title": "Ask HN: I’m an FCC Commissioner proposing regulation of IoT security updates",
+        "url": "https://news.ycombinator.com/item?id=37392676",
+        "points": 3387,
+        "num_comments": 925,
+        "author": "SimingtonFCC",
+        "created_at": "2023-09-05T15:07:21Z",
+        "hn_url": "https://news.ycombinator.com/item?id=37392676"
+      },
+      {
+        "title": "Ask HN: I'm a software engineer going blind, how should I prepare?",
+        "url": "https://news.ycombinator.com/item?id=22918980",
+        "points": 3270,
+        "num_comments": 473,
+        "author": "zachrip",
+        "created_at": "2020-04-19T21:33:46Z",
+        "hn_url": "https://news.ycombinator.com/item?id=22918980"
+      },
+      {
+        "title": "Ask HN: Am I the longest-serving programmer – 57 years and counting?",
+        "url": "https://news.ycombinator.com/item?id=23366546",
+        "points": 2634,
+        "num_comments": 531,
+        "author": "genedangelo",
+        "created_at": "2020-05-31T01:53:44Z",
+        "hn_url": "https://news.ycombinator.com/item?id=23366546"
+      },
+      {
+        "title": "Ask HN: Is S3 down?",
+        "url": "https://news.ycombinator.com/item?id=13755673",
+        "points": 2589,
+        "num_comments": 1055,
+        "author": "iamdeedubs",
+        "created_at": "2017-02-28T17:45:58Z",
+        "hn_url": "https://news.ycombinator.com/item?id=13755673"
+      },
+      {
+        "title": "Tell HN: Help restore the tax deduction for software dev in the US (Section 174)",
+        "url": "https://news.ycombinator.com/item?id=44226145",
+        "points": 2439,
+        "num_comments": 907,
+        "author": "dang",
+        "created_at": "2025-06-09T16:28:51Z",
+        "hn_url": "https://news.ycombinator.com/item?id=44226145"
+      },
+      {
+        "title": "Thank HN: You helped me get a new job",
+        "url": "https://news.ycombinator.com/item?id=22050802",
+        "points": 2425,
+        "num_comments": 193,
+        "author": "atum47",
+        "created_at": "2020-01-15T00:51:29Z",
+        "hn_url": "https://news.ycombinator.com/item?id=22050802"
+      },
+      {
+        "title": "Tell HN: New features and a moderator",
+        "url": "https://news.ycombinator.com/item?id=12073675",
+        "points": 2381,
+        "num_comments": 451,
+        "author": "dang",
+        "created_at": "2016-07-11T19:34:57Z",
+        "hn_url": "https://news.ycombinator.com/item?id=12073675"
+      },
+      {
+        "title": "Tell HN: Thank You Dang",
+        "url": "https://news.ycombinator.com/item?id=25225775",
+        "points": 2363,
+        "num_comments": 249,
+        "author": "sinak",
+        "created_at": "2020-11-27T05:35:27Z",
+        "hn_url": "https://news.ycombinator.com/item?id=25225775"
+      },
+      {
+        "title": "Google outage – resolved",
+        "url": "https://news.ycombinator.com/item?id=25415989",
+        "points": 2316,
+        "num_comments": 827,
+        "author": "abluecloud",
+        "created_at": "2020-12-14T11:51:30Z",
+        "hn_url": "https://news.ycombinator.com/item?id=25415989"
+      },
+      {
+        "title": "Thank HN: My bootstrapped startup got acquired today",
+        "url": "https://news.ycombinator.com/item?id=42806247",
+        "points": 2246,
+        "num_comments": 396,
+        "author": "paraschopra",
+        "created_at": "2025-01-23T17:58:05Z",
+        "hn_url": "https://news.ycombinator.com/item?id=42806247"
+      }
+    ]
+  },
+  "github_trending": {
+    "source": "github_trending",
+    "collected_at": "2026-07-13T14:11:26.318109+08:00",
+    "repositories": [
+      {
+        "repo_name": "HKUDS/Vibe-Trading",
+        "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+        "language": "Python",
+        "stars_today": 768,
+        "total_stars": 20842,
+        "forks": 3632,
+        "repo_url": "https://github.com/HKUDS/Vibe-Trading"
+      },
+      {
+        "repo_name": "k1tbyte/Wand-Enhancer",
+        "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
+        "language": "C#",
+        "stars_today": 609,
+        "total_stars": 7046,
+        "forks": 19705,
+        "repo_url": "https://github.com/k1tbyte/Wand-Enhancer"
+      },
+      {
+        "repo_name": "malisper/pgrust",
+        "description": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+        "language": "Rust",
+        "stars_today": 518,
+        "total_stars": 2591,
+        "forks": 74,
+        "repo_url": "https://github.com/malisper/pgrust"
+      },
+      {
+        "repo_name": "anthropics/claude-cookbooks",
+        "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+        "language": "Jupyter Notebook",
+        "stars_today": 459,
+        "total_stars": 48576,
+        "forks": 5744,
+        "repo_url": "https://github.com/anthropics/claude-cookbooks"
+      },
+      {
+        "repo_name": "Dicklesworthstone/destructive_command_guard",
+        "description": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+        "language": "Rust",
+        "stars_today": 444,
+        "total_stars": 3234,
+        "forks": 120,
+        "repo_url": "https://github.com/Dicklesworthstone/destructive_command_guard"
+      },
+      {
+        "repo_name": "Shubhamsaboo/awesome-llm-apps",
+        "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+        "language": "Python",
+        "stars_today": 408,
+        "total_stars": 118833,
+        "forks": 17662,
+        "repo_url": "https://github.com/Shubhamsaboo/awesome-llm-apps"
+      },
+      {
+        "repo_name": "home-assistant/core",
+        "description": "🏡 Open source home automation that puts local control and privacy first.",
+        "language": "Python",
+        "stars_today": 400,
+        "total_stars": 89192,
+        "forks": 38086,
+        "repo_url": "https://github.com/home-assistant/core"
+      },
+      {
+        "repo_name": "public-apis/public-apis",
+        "description": "A collective list of free APIs",
+        "language": "Python",
+        "stars_today": 378,
+        "total_stars": 449472,
+        "forks": 49392,
+        "repo_url": "https://github.com/public-apis/public-apis"
+      },
+      {
+        "repo_name": "par274/sharpemu",
+        "description": "An experimental PlayStation 5 emulator project.",
+        "language": "C#",
+        "stars_today": 314,
+        "total_stars": 1364,
+        "forks": 84,
+        "repo_url": "https://github.com/par274/sharpemu"
+      },
+      {
+        "repo_name": "davila7/claude-code-templates",
+        "description": "CLI tool for configuring and monitoring Claude Code",
+        "language": "Python",
+        "stars_today": 274,
+        "total_stars": 29291,
+        "forks": 3209,
+        "repo_url": "https://github.com/davila7/claude-code-templates"
+      },
+      {
+        "repo_name": "iptv-org/iptv",
+        "description": "Collection of publicly available IPTV channels from all over the world",
+        "language": "TypeScript",
+        "stars_today": 270,
+        "total_stars": 132662,
+        "forks": 7569,
+        "repo_url": "https://github.com/iptv-org/iptv"
+      },
+      {
+        "repo_name": "wonderwhy-er/DesktopCommanderMCP",
+        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+        "language": "TypeScript",
+        "stars_today": 210,
+        "total_stars": 8052,
+        "forks": 991,
+        "repo_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP"
+      },
+      {
+        "repo_name": "openai/codex",
+        "description": "Lightweight coding agent that runs in your terminal",
+        "language": "Rust",
+        "stars_today": 195,
+        "total_stars": 97485,
+        "forks": 14516,
+        "repo_url": "https://github.com/openai/codex"
+      },
+      {
+        "repo_name": "heygen-com/hyperframes",
+        "description": "Write HTML. Render video. Built for agents.",
+        "language": "TypeScript",
+        "stars_today": 164,
+        "total_stars": 34558,
+        "forks": 3245,
+        "repo_url": "https://github.com/heygen-com/hyperframes"
+      },
+      {
+        "repo_name": "oven-sh/bun",
+        "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+        "language": "Rust",
+        "stars_today": 162,
+        "total_stars": 94643,
+        "forks": 4964,
+        "repo_url": "https://github.com/oven-sh/bun"
+      },
+      {
+        "repo_name": "Nutlope/hallmark",
+        "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "language": "CSS",
+        "stars_today": 155,
+        "total_stars": 4472,
+        "forks": 257,
+        "repo_url": "https://github.com/Nutlope/hallmark"
+      },
+      {
+        "repo_name": "chen08209/FlClash",
+        "description": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
+        "language": "Dart",
+        "stars_today": 154,
+        "total_stars": 45329,
+        "forks": 2859,
+        "repo_url": "https://github.com/chen08209/FlClash"
+      },
+      {
+        "repo_name": "ruvnet/ruflo",
+        "description": "🌊 The leading agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+        "language": "TypeScript",
+        "stars_today": 142,
+        "total_stars": 64212,
+        "forks": 7605,
+        "repo_url": "https://github.com/ruvnet/ruflo"
+      },
+      {
+        "repo_name": "gitroomhq/postiz-app",
+        "description": "📨 The ultimate agentic social media scheduling tool 🤖",
+        "language": "TypeScript",
+        "stars_today": 127,
+        "total_stars": 33161,
+        "forks": 6187,
+        "repo_url": "https://github.com/gitroomhq/postiz-app"
+      },
+      {
+        "repo_name": "Crosstalk-Solutions/project-nomad",
+        "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+        "language": "TypeScript",
+        "stars_today": 125,
+        "total_stars": 33905,
+        "forks": 3400,
+        "repo_url": "https://github.com/Crosstalk-Solutions/project-nomad"
+      },
+      {
+        "repo_name": "Comfy-Org/ComfyUI",
+        "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+        "language": "Python",
+        "stars_today": 125,
+        "total_stars": 120520,
+        "forks": 14172,
+        "repo_url": "https://github.com/Comfy-Org/ComfyUI"
+      },
+      {
+        "repo_name": "virattt/ai-hedge-fund",
+        "description": "An AI Hedge Fund Team",
+        "language": "Python",
+        "stars_today": 115,
+        "total_stars": 61482,
+        "forks": 10871,
+        "repo_url": "https://github.com/virattt/ai-hedge-fund"
+      },
+      {
+        "repo_name": "cypress-io/cypress",
+        "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+        "language": "TypeScript",
+        "stars_today": 109,
+        "total_stars": 50675,
+        "forks": 3595,
+        "repo_url": "https://github.com/cypress-io/cypress"
+      },
+      {
+        "repo_name": "FoundationAgents/OpenManus",
+        "description": "No fortress, purely open ground. OpenManus is Coming.",
+        "language": "Python",
+        "stars_today": 101,
+        "total_stars": 57300,
+        "forks": 9964,
+        "repo_url": "https://github.com/FoundationAgents/OpenManus"
+      },
+      {
+        "repo_name": "smicallef/spiderfoot",
+        "description": "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+        "language": "Python",
+        "stars_today": 98,
+        "total_stars": 19537,
+        "forks": 3196,
+        "repo_url": "https://github.com/smicallef/spiderfoot"
+      },
+      {
+        "repo_name": "microsoft/pg_durable",
+        "description": "PostgreSQL in-database durable execution",
+        "language": "Rust",
+        "stars_today": 87,
+        "total_stars": 2523,
+        "forks": 66,
+        "repo_url": "https://github.com/microsoft/pg_durable"
+      },
+      {
+        "repo_name": "nexmoe/VidBee",
+        "description": "Download videos from almost any website worldwide",
+        "language": "TypeScript",
+        "stars_today": 85,
+        "total_stars": 9901,
+        "forks": 764,
+        "repo_url": "https://github.com/nexmoe/VidBee"
+      },
+      {
+        "repo_name": "pingdotgg/t3code",
+        "description": "",
+        "language": "TypeScript",
+        "stars_today": 75,
+        "total_stars": 13804,
+        "forks": 2897,
+        "repo_url": "https://github.com/pingdotgg/t3code"
+      },
+      {
+        "repo_name": "nuxt/nuxt",
+        "description": "the full-stack Vue framework",
+        "language": "TypeScript",
+        "stars_today": 67,
+        "total_stars": 60767,
+        "forks": 5844,
+        "repo_url": "https://github.com/nuxt/nuxt"
+      },
+      {
+        "repo_name": "PrefectHQ/prefect",
+        "description": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
+        "language": "Python",
+        "stars_today": 66,
+        "total_stars": 23236,
+        "forks": 2400,
+        "repo_url": "https://github.com/PrefectHQ/prefect"
+      },
+      {
+        "repo_name": "rust-lang/rust",
+        "description": "Empowering everyone to build reliable and efficient software.",
+        "language": "Rust",
+        "stars_today": 65,
+        "total_stars": 114670,
+        "forks": 15408,
+        "repo_url": "https://github.com/rust-lang/rust"
+      },
+      {
+        "repo_name": "Infisical/infisical",
+        "description": "Infisical is the open-source platform for secrets, certificates, and privileged access management.",
+        "language": "TypeScript",
+        "stars_today": 61,
+        "total_stars": 27904,
+        "forks": 2089,
+        "repo_url": "https://github.com/Infisical/infisical"
+      },
+      {
+        "repo_name": "ComposioHQ/awesome-claude-skills",
+        "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+        "language": "Python",
+        "stars_today": 60,
+        "total_stars": 67568,
+        "forks": 7622,
+        "repo_url": "https://github.com/ComposioHQ/awesome-claude-skills"
+      },
+      {
+        "repo_name": "teng-lin/notebooklm-py",
+        "description": "Unofficial Python API and agentic skill for Google NotebookLM. Full programmatic access to NotebookLM's features—including capabilities the web UI doesn't expose—via Python, CLI, and AI agents like Claude Code, Codex, and OpenClaw.",
+        "language": "Python",
+        "stars_today": 57,
+        "total_stars": 17669,
+        "forks": 2394,
+        "repo_url": "https://github.com/teng-lin/notebooklm-py"
+      },
+      {
+        "repo_name": "pydantic/pydantic-ai",
+        "description": "AI Agent Framework, the Pydantic way",
+        "language": "Python",
+        "stars_today": 42,
+        "total_stars": 18459,
+        "forks": 2350,
+        "repo_url": "https://github.com/pydantic/pydantic-ai"
+      },
+      {
+        "repo_name": "astral-sh/ruff",
+        "description": "An extremely fast Python linter and code formatter, written in Rust.",
+        "language": "Rust",
+        "stars_today": 40,
+        "total_stars": 48547,
+        "forks": 2233,
+        "repo_url": "https://github.com/astral-sh/ruff"
+      },
+      {
+        "repo_name": "toeverything/AFFiNE",
+        "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+        "language": "TypeScript",
+        "stars_today": 39,
+        "total_stars": 70380,
+        "forks": 5050,
+        "repo_url": "https://github.com/toeverything/AFFiNE"
+      },
+      {
+        "repo_name": "Cpp2Rust/cpp2rust",
+        "description": "Cpp2Rust: Automatic Translation of C++ to Safe Rust",
+        "language": "Rust",
+        "stars_today": 39,
+        "total_stars": 252,
+        "forks": 10,
+        "repo_url": "https://github.com/Cpp2Rust/cpp2rust"
+      },
+      {
+        "repo_name": "tauri-apps/tauri",
+        "description": "Build smaller, faster, and more secure desktop and mobile applications with a web frontend.",
+        "language": "Rust",
+        "stars_today": 38,
+        "total_stars": 108982,
+        "forks": 3783,
+        "repo_url": "https://github.com/tauri-apps/tauri"
+      },
+      {
+        "repo_name": "angular/angular",
+        "description": "Deliver web apps with confidence 🚀",
+        "language": "TypeScript",
+        "stars_today": 36,
+        "total_stars": 100623,
+        "forks": 27504,
+        "repo_url": "https://github.com/angular/angular"
+      },
+      {
+        "repo_name": "google-gemini/gemini-cli",
+        "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+        "language": "TypeScript",
+        "stars_today": 34,
+        "total_stars": 105944,
+        "forks": 14248,
+        "repo_url": "https://github.com/google-gemini/gemini-cli"
+      },
+      {
+        "repo_name": "MervinPraison/PraisonAI",
+        "description": "PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipping autonomous self-improving agents that research, plan, code, and execute tasks. Deployed in 5 lines of code with built-in memory, RAG, and support for 100+ LLMs.",
+        "language": "Python",
+        "stars_today": 32,
+        "total_stars": 8430,
+        "forks": 1306,
+        "repo_url": "https://github.com/MervinPraison/PraisonAI"
+      },
+      {
+        "repo_name": "dreamhunter2333/cloudflare_temp_email",
+        "description": "CloudFlare free temp domain email 免费收发 临时域名邮箱 支持附件 IMAP SMTP TelegramBot",
+        "language": "TypeScript",
+        "stars_today": 32,
+        "total_stars": 10355,
+        "forks": 6879,
+        "repo_url": "https://github.com/dreamhunter2333/cloudflare_temp_email"
+      },
+      {
+        "repo_name": "InsForge/InsForge",
+        "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
+        "language": "TypeScript",
+        "stars_today": 32,
+        "total_stars": 12233,
+        "forks": 1060,
+        "repo_url": "https://github.com/InsForge/InsForge"
+      },
+      {
+        "repo_name": "paperless-ngx/paperless-ngx",
+        "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
+        "language": "Python",
+        "stars_today": 27,
+        "total_stars": 42966,
+        "forks": 2886,
+        "repo_url": "https://github.com/paperless-ngx/paperless-ngx"
+      },
+      {
+        "repo_name": "meilisearch/meilisearch",
+        "description": "A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.",
+        "language": "Rust",
+        "stars_today": 24,
+        "total_stars": 58538,
+        "forks": 2613,
+        "repo_url": "https://github.com/meilisearch/meilisearch"
+      },
+      {
+        "repo_name": "lingfengQAQ/webnovel-writer",
+        "description": "基于 Claude Code 的长篇网文辅助创作系统，解决 AI 写作中的「遗忘」和「幻觉」问题，支持 200 万字量级 连载创作。",
+        "language": "Python",
+        "stars_today": 22,
+        "total_stars": 5640,
+        "forks": 980,
+        "repo_url": "https://github.com/lingfengQAQ/webnovel-writer"
+      },
+      {
+        "repo_name": "microsoft/TRELLIS.2",
+        "description": "Native and Compact Structured Latents for 3D Generation",
+        "language": "Python",
+        "stars_today": 22,
+        "total_stars": 8713,
+        "forks": 1076,
+        "repo_url": "https://github.com/microsoft/TRELLIS.2"
+      },
+      {
+        "repo_name": "youtubediscord/zapret",
+        "description": "Zapret (Запрет обход блокировки Дискорда и Ютуба)",
+        "language": "Python",
+        "stars_today": 21,
+        "total_stars": 1349,
+        "forks": 103,
+        "repo_url": "https://github.com/youtubediscord/zapret"
+      },
+      {
+        "repo_name": "Kuberwastaken/claurst",
+        "description": "Agentic Coding for Builders who Ship",
+        "language": "Rust",
+        "stars_today": 19,
+        "total_stars": 10043,
+        "forks": 7791,
+        "repo_url": "https://github.com/Kuberwastaken/claurst"
+      },
+      {
+        "repo_name": "screenpipe/screenpipe",
+        "description": "YC (S26) | AI that knows what you've seen, said, or heard. Records everything you do, say, hear 24/7, local, private, secure. Connect to OpenClaw, Hermes agent and 100+ apps",
+        "language": "Rust",
+        "stars_today": 18,
+        "total_stars": 19802,
+        "forks": 1933,
+        "repo_url": "https://github.com/screenpipe/screenpipe"
+      },
+      {
+        "repo_name": "louislam/dockge",
+        "description": "A fancy, easy-to-use and reactive self-hosted docker compose.yaml stack-oriented manager",
+        "language": "TypeScript",
+        "stars_today": 17,
+        "total_stars": 23780,
+        "forks": 784,
+        "repo_url": "https://github.com/louislam/dockge"
+      },
+      {
+        "repo_name": "ColeMurray/background-agents",
+        "description": "An open-source background agents coding system",
+        "language": "TypeScript",
+        "stars_today": 16,
+        "total_stars": 2322,
+        "forks": 345,
+        "repo_url": "https://github.com/ColeMurray/background-agents"
+      },
+      {
+        "repo_name": "transact-rs/sqlx",
+        "description": "🧰 The Rust SQL Toolkit. An async, pure Rust SQL crate featuring compile-time checked queries without a DSL. Supports PostgreSQL, MySQL, and SQLite.",
+        "language": "Rust",
+        "stars_today": 16,
+        "total_stars": 17298,
+        "forks": 1643,
+        "repo_url": "https://github.com/transact-rs/sqlx"
+      },
+      {
+        "repo_name": "microsoft/mxc",
+        "description": "Policy-driven, layered isolation and containment",
+        "language": "Rust",
+        "stars_today": 13,
+        "total_stars": 1123,
+        "forks": 53,
+        "repo_url": "https://github.com/microsoft/mxc"
+      },
+      {
+        "repo_name": "influxdata/influxdb",
+        "description": "Scalable datastore for metrics, events, and real-time analytics",
+        "language": "Rust",
+        "stars_today": 13,
+        "total_stars": 31633,
+        "forks": 3716,
+        "repo_url": "https://github.com/influxdata/influxdb"
+      },
+      {
+        "repo_name": "DioxusLabs/dioxus",
+        "description": "Fullstack app framework for web, desktop, and mobile.",
+        "language": "Rust",
+        "stars_today": 12,
+        "total_stars": 36699,
+        "forks": 1718,
+        "repo_url": "https://github.com/DioxusLabs/dioxus"
+      },
+      {
+        "repo_name": "RocketChat/Rocket.Chat",
+        "description": "The Secure CommsOS™ for mission-critical operations",
+        "language": "TypeScript",
+        "stars_today": 11,
+        "total_stars": 45779,
+        "forks": 13724,
+        "repo_url": "https://github.com/RocketChat/Rocket.Chat"
+      },
+      {
+        "repo_name": "cloudflare/skills",
+        "description": "Skills for teaching agents how to build on Cloudflare.",
+        "language": "TypeScript",
+        "stars_today": 6,
+        "total_stars": 2125,
+        "forks": 193,
+        "repo_url": "https://github.com/cloudflare/skills"
+      }
+    ]
+  },
+  "producthunt": {
+    "source": "producthunt",
+    "collected_at": "2026-07-13T14:11:38.028531+08:00",
+    "skipped": true,
+    "reason": "PH_TOKEN not set",
+    "products": []
+  },
+  "huggingface": {
+    "source": "huggingface",
+    "collected_at": "2026-07-13T14:11:38.028553+08:00",
+    "models": [
+      {
+        "model_name": "tencent/Hy3",
+        "author": "tencent",
+        "pipeline_tag": "text-generation",
+        "likes": 731,
+        "downloads": 8655,
+        "trending_score": 681,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/tencent/Hy3"
+      },
+      {
+        "model_name": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
+        "author": "empero-ai",
+        "pipeline_tag": "image-text-to-text",
+        "likes": 2053,
+        "downloads": 1967677,
+        "trending_score": 409,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF"
+      },
+      {
+        "model_name": "zai-org/GLM-5.2",
+        "author": "zai-org",
+        "pipeline_tag": "text-generation",
+        "likes": 3863,
+        "downloads": 441413,
+        "trending_score": 305,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/zai-org/GLM-5.2"
+      },
+      {
+        "model_name": "bottlecapai/ThinkingCap-Qwen3.6-27B",
+        "author": "bottlecapai",
+        "pipeline_tag": "image-text-to-text",
+        "likes": 270,
+        "downloads": 4463,
+        "trending_score": 261,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B"
+      },
+      {
+        "model_name": "conradlocke/krea2-identity-edit",
+        "author": "conradlocke",
+        "pipeline_tag": null,
+        "likes": 218,
+        "downloads": 0,
+        "trending_score": 217,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/conradlocke/krea2-identity-edit"
+      },
+      {
+        "model_name": "InternScience/Agents-A1",
+        "author": "InternScience",
+        "pipeline_tag": "text-generation",
+        "likes": 511,
+        "downloads": 29038,
+        "trending_score": 208,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/InternScience/Agents-A1"
+      },
+      {
+        "model_name": "froggeric/Qwen-Fixed-Chat-Templates",
+        "author": "froggeric",
+        "pipeline_tag": null,
+        "likes": 870,
+        "downloads": 0,
+        "trending_score": 196,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates"
+      },
+      {
+        "model_name": "baidu/Unlimited-OCR",
+        "author": "baidu",
+        "pipeline_tag": "image-text-to-text",
+        "likes": 1949,
+        "downloads": 1430656,
+        "trending_score": 180,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/baidu/Unlimited-OCR"
+      },
+      {
+        "model_name": "GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF",
+        "author": "GnLOLot",
+        "pipeline_tag": "text-generation",
+        "likes": 206,
+        "downloads": 49268,
+        "trending_score": 154,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF"
+      },
+      {
+        "model_name": "unsloth/DeepSeek-V4-Flash-GGUF",
+        "author": "unsloth",
+        "pipeline_tag": null,
+        "likes": 156,
+        "downloads": 44614,
+        "trending_score": 150,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-GGUF"
+      },
+      {
+        "model_name": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+        "author": "HauhauCS",
+        "pipeline_tag": "image-text-to-text",
+        "likes": 2685,
+        "downloads": 2596384,
+        "trending_score": 142,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive"
+      },
+      {
+        "model_name": "OpenMOSS-Team/MOSS-Transcribe-Diarize",
+        "author": "OpenMOSS-Team",
+        "pipeline_tag": "audio-text-to-text",
+        "likes": 138,
+        "downloads": 14491,
+        "trending_score": 136,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize"
+      },
+      {
+        "model_name": "nvidia/Nemotron-Labs-Audex-30B-A3B",
+        "author": "nvidia",
+        "pipeline_tag": "text-generation",
+        "likes": 136,
+        "downloads": 901,
+        "trending_score": 134,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/nvidia/Nemotron-Labs-Audex-30B-A3B"
+      },
+      {
+        "model_name": "google/tabfm-1.0.0-pytorch",
+        "author": "google",
+        "pipeline_tag": "tabular-classification",
+        "likes": 357,
+        "downloads": 20973,
+        "trending_score": 124,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/google/tabfm-1.0.0-pytorch"
+      },
+      {
+        "model_name": "open-gigaai/Giga-World-1",
+        "author": "open-gigaai",
+        "pipeline_tag": null,
+        "likes": 124,
+        "downloads": 0,
+        "trending_score": 123,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/open-gigaai/Giga-World-1"
+      },
+      {
+        "model_name": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+        "author": "yuxinlu1",
+        "pipeline_tag": "text-generation",
+        "likes": 1162,
+        "downloads": 445368,
+        "trending_score": 114,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF"
+      },
+      {
+        "model_name": "meituan-longcat/LongCat-2.0",
+        "author": "meituan-longcat",
+        "pipeline_tag": "text-generation",
+        "likes": 183,
+        "downloads": 1767,
+        "trending_score": 112,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/meituan-longcat/LongCat-2.0"
+      },
+      {
+        "model_name": "nvidia/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-NVFP4",
+        "author": "nvidia",
+        "pipeline_tag": "text-generation",
+        "likes": 114,
+        "downloads": 34796,
+        "trending_score": 111,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-NVFP4"
+      },
+      {
+        "model_name": "deepreinforce-ai/Ornith-1.0-35B-GGUF",
+        "author": "deepreinforce-ai",
+        "pipeline_tag": "text-generation",
+        "likes": 856,
+        "downloads": 1347036,
+        "trending_score": 107,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B-GGUF"
+      },
+      {
+        "model_name": "Alissonerdx/LTX-Best-Face-ID",
+        "author": "Alissonerdx",
+        "pipeline_tag": "text-to-video",
+        "likes": 116,
+        "downloads": 0,
+        "trending_score": 105,
+        "last_modified": null,
+        "model_url": "https://huggingface.co/Alissonerdx/LTX-Best-Face-ID"
+      }
+    ]
+  },
+  "reddit": {
+    "source": "reddit",
+    "collected_at": "2026-07-13T14:11:38.123845+08:00",
+    "posts": [],
+    "failed_subreddits": [
+      "SaaS",
+      "SideProject",
+      "indiehackers",
+      "selfhosted",
+      "programming"
+    ]
+  },
+  "google_trends": {
+    "source": "google_trends",
+    "collected_at": "2026-07-13T14:11:50.672546+08:00",
+    "skipped": true,
+    "reason": "SERPAPI_KEY not set",
+    "trends": []
+  }
+}
