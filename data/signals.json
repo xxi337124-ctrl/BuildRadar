@@ -2948,5 +2948,84 @@
       "type": "rising_tool",
       "top_score": 414
     }
+  ],
+  "2026-07-16": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 2130
+    },
+    {
+      "signal_id": "server-cf1e8c14",
+      "primary_keyword": "server",
+      "keywords": [
+        "server"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 1998
+    },
+    {
+      "signal_id": "openai-codex-788c25f0",
+      "primary_keyword": "openai codex",
+      "keywords": [
+        "openai codex"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1623
+    },
+    {
+      "signal_id": "inkling-5c876dfd",
+      "primary_keyword": "inkling",
+      "keywords": [
+        "inkling"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 841
+    },
+    {
+      "signal_id": "command-1dccadfe",
+      "primary_keyword": "command",
+      "keywords": [
+        "command"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 471
+    },
+    {
+      "signal_id": "ai-4921c0e2",
+      "primary_keyword": "ai",
+      "keywords": [
+        "ai"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 137
+    }
   ]
 }
