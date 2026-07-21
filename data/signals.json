@@ -1,28 +1,4 @@
 {
-  "2026-04-21": [
-    {
-      "signal_id": "gemini-48bafc50",
-      "primary_keyword": "gemini",
-      "keywords": [
-        "gemini"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 3346
-    },
-    {
-      "signal_id": "openai-2c6ee24b",
-      "primary_keyword": "openai",
-      "keywords": [
-        "openai"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 230
-    }
-  ],
   "2026-04-22": [
     {
       "signal_id": "gemini-48bafc50",
@@ -3038,6 +3014,41 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 1343
+    }
+  ],
+  "2026-07-21": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "kimi-aacfa66c",
+      "primary_keyword": "kimi",
+      "keywords": [
+        "kimi"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1107
+    },
+    {
+      "signal_id": "ai-agent-1d72e998",
+      "primary_keyword": "ai agent",
+      "keywords": [
+        "ai agent"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 862
     }
   ]
 }
