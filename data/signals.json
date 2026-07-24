@@ -1,39 +1,4 @@
 {
-  "2026-04-24": [
-    {
-      "signal_id": "gemini-48bafc50",
-      "primary_keyword": "gemini",
-      "keywords": [
-        "gemini"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 3346
-    },
-    {
-      "signal_id": "claude-8bb75b30",
-      "primary_keyword": "claude",
-      "keywords": [
-        "claude"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 1011
-    },
-    {
-      "signal_id": "ai-agent-1d72e998",
-      "primary_keyword": "ai agent",
-      "keywords": [
-        "ai agent"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 580
-    }
-  ],
   "2026-04-25": [
     {
       "signal_id": "gemini-48bafc50",
@@ -3038,6 +3003,52 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 1651
+    }
+  ],
+  "2026-07-24": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "openai-2c6ee24b",
+      "primary_keyword": "openai",
+      "keywords": [
+        "openai"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1929
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 1929
+    },
+    {
+      "signal_id": "ai-agent-1d72e998",
+      "primary_keyword": "ai agent",
+      "keywords": [
+        "ai agent"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 1307
     }
   ]
 }
