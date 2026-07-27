@@ -1,50 +1,4 @@
 {
-  "2026-04-27": [
-    {
-      "signal_id": "gemini-48bafc50",
-      "primary_keyword": "gemini",
-      "keywords": [
-        "gemini"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 3346
-    },
-    {
-      "signal_id": "ai-agent-1d72e998",
-      "primary_keyword": "ai agent",
-      "keywords": [
-        "ai agent"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 2519
-    },
-    {
-      "signal_id": "rust-72812e30",
-      "primary_keyword": "rust",
-      "keywords": [
-        "rust"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 100
-    },
-    {
-      "signal_id": "core-a74ad8df",
-      "primary_keyword": "core",
-      "keywords": [
-        "core"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 73
-    }
-  ],
   "2026-04-28": [
     {
       "signal_id": "gemini-48bafc50",
@@ -3082,6 +3036,30 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 1381
+    }
+  ],
+  "2026-07-27": [
+    {
+      "signal_id": "self-hosted-3f51ceab",
+      "primary_keyword": "self-hosted",
+      "keywords": [
+        "self-hosted"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 888
+    },
+    {
+      "signal_id": "django-2b9afb89",
+      "primary_keyword": "django",
+      "keywords": [
+        "django"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 147
     }
   ]
 }
