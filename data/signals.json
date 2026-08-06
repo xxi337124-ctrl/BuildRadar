@@ -1,17 +1,4 @@
 {
-  "2026-05-07": [
-    {
-      "signal_id": "ai-agent-1d72e998",
-      "primary_keyword": "ai agent",
-      "keywords": [
-        "ai agent"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 6175
-    }
-  ],
   "2026-05-08": [
     {
       "signal_id": "ai-agent-1d72e998",
@@ -2971,6 +2958,52 @@
       "grade": "B",
       "type": "opportunity",
       "top_score": 3346
+    }
+  ],
+  "2026-08-06": [
+    {
+      "signal_id": "ai-agent-1d72e998",
+      "primary_keyword": "ai agent",
+      "keywords": [
+        "ai agent"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1892
+    },
+    {
+      "signal_id": "zed-89e3eb66",
+      "primary_keyword": "zed",
+      "keywords": [
+        "zed"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 355
+    },
+    {
+      "signal_id": "self-hosted-3f51ceab",
+      "primary_keyword": "self-hosted",
+      "keywords": [
+        "self-hosted"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 180
+    },
+    {
+      "signal_id": "rust-72812e30",
+      "primary_keyword": "rust",
+      "keywords": [
+        "rust"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 96
     }
   ]
 }
