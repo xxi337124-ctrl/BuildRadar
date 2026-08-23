@@ -1,39 +1,4 @@
 {
-  "2026-05-24": [
-    {
-      "signal_id": "gemini-48bafc50",
-      "primary_keyword": "gemini",
-      "keywords": [
-        "gemini"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 3346
-    },
-    {
-      "signal_id": "lance-3573c6ef",
-      "primary_keyword": "lance",
-      "keywords": [
-        "lance"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 715
-    },
-    {
-      "signal_id": "art-2c5f64ab",
-      "primary_keyword": "art",
-      "keywords": [
-        "art"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 256
-    }
-  ],
   "2026-05-25": [
     {
       "signal_id": "gemini-48bafc50",
@@ -2860,6 +2825,63 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 921
+    }
+  ],
+  "2026-08-23": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "ai-agent-1d72e998",
+      "primary_keyword": "ai agent",
+      "keywords": [
+        "ai agent"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 2683
+    },
+    {
+      "signal_id": "openai-codex-788c25f0",
+      "primary_keyword": "openai codex",
+      "keywords": [
+        "openai codex"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1544
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 641
+    },
+    {
+      "signal_id": "nanogpt-5c7dfc0b",
+      "primary_keyword": "nanogpt",
+      "keywords": [
+        "nanogpt"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 66
     }
   ]
 }
