@@ -1,39 +1,4 @@
 {
-  "2026-05-27": [
-    {
-      "signal_id": "gemini-48bafc50",
-      "primary_keyword": "gemini",
-      "keywords": [
-        "gemini"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 4697
-    },
-    {
-      "signal_id": "book-821f0328",
-      "primary_keyword": "book",
-      "keywords": [
-        "book"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 216
-    },
-    {
-      "signal_id": "rust-72812e30",
-      "primary_keyword": "rust",
-      "keywords": [
-        "rust"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 152
-    }
-  ],
   "2026-05-28": [
     {
       "signal_id": "claude-8bb75b30",
@@ -2860,6 +2825,19 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 667
+    }
+  ],
+  "2026-08-26": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
     }
   ]
 }
