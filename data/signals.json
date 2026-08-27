@@ -1,39 +1,4 @@
 {
-  "2026-05-28": [
-    {
-      "signal_id": "claude-8bb75b30",
-      "primary_keyword": "claude",
-      "keywords": [
-        "claude"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 4465
-    },
-    {
-      "signal_id": "gemini-48bafc50",
-      "primary_keyword": "gemini",
-      "keywords": [
-        "gemini"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 4465
-    },
-    {
-      "signal_id": "openai-2c6ee24b",
-      "primary_keyword": "openai",
-      "keywords": [
-        "openai"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 794
-    }
-  ],
   "2026-05-29": [
     {
       "signal_id": "claude-8bb75b30",
@@ -2838,6 +2803,52 @@
       "grade": "B",
       "type": "opportunity",
       "top_score": 3346
+    }
+  ],
+  "2026-08-27": [
+    {
+      "signal_id": "ai-agent-1d72e998",
+      "primary_keyword": "ai agent",
+      "keywords": [
+        "ai agent"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 4260
+    },
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "glm-5-3-flash-1313ecb1",
+      "primary_keyword": "glm-5.3-flash",
+      "keywords": [
+        "glm-5.3-flash"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1204
+    },
+    {
+      "signal_id": "nitter-5cdf2aa1",
+      "primary_keyword": "nitter",
+      "keywords": [
+        "nitter"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 112
     }
   ]
 }
