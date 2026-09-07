@@ -1,28 +1,4 @@
 {
-  "2026-06-08": [
-    {
-      "signal_id": "gemini-48bafc50",
-      "primary_keyword": "gemini",
-      "keywords": [
-        "gemini"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 3346
-    },
-    {
-      "signal_id": "durable-1759f188",
-      "primary_keyword": "durable",
-      "keywords": [
-        "durable"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 1392
-    }
-  ],
   "2026-06-09": [
     {
       "signal_id": "gemini-48bafc50",
@@ -2827,6 +2803,30 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 1314
+    }
+  ],
+  "2026-09-07": [
+    {
+      "signal_id": "skills-a658279f",
+      "primary_keyword": "skills",
+      "keywords": [
+        "skills"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 2207
+    },
+    {
+      "signal_id": "openai-2c6ee24b",
+      "primary_keyword": "openai",
+      "keywords": [
+        "openai"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 161
     }
   ]
 }
