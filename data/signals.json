@@ -1,17 +1,4 @@
 {
-  "2026-06-26": [
-    {
-      "signal_id": "gemini-48bafc50",
-      "primary_keyword": "gemini",
-      "keywords": [
-        "gemini"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 3346
-    }
-  ],
   "2026-06-27": [
     {
       "signal_id": "gemini-48bafc50",
@@ -2662,6 +2649,41 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 626
+    }
+  ],
+  "2026-09-25": [
+    {
+      "signal_id": "laya-a0d2d15f",
+      "primary_keyword": "laya",
+      "keywords": [
+        "laya"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 3484
+    },
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 920
     }
   ]
 }
