@@ -1,29 +1,4 @@
 {
-  "2026-06-29": [
-    {
-      "signal_id": "claude-8bb75b30",
-      "primary_keyword": "claude",
-      "keywords": [
-        "claude"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 1445
-    },
-    {
-      "signal_id": "openai-2c6ee24b",
-      "primary_keyword": "openai",
-      "keywords": [
-        "openai",
-        "openai codex"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 1445
-    }
-  ],
   "2026-06-30": [],
   "2026-07-01": [
     {
@@ -2706,6 +2681,19 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 197
+    }
+  ],
+  "2026-09-28": [
+    {
+      "signal_id": "rust-72812e30",
+      "primary_keyword": "rust",
+      "keywords": [
+        "rust"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 145
     }
   ]
 }
