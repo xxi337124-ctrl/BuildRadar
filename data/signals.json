@@ -1,5 +1,4 @@
 {
-  "2026-07-19": [],
   "2026-07-20": [
     {
       "signal_id": "gemini-48bafc50",
@@ -2652,6 +2651,41 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 1552
+    }
+  ],
+  "2026-10-18": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "openai-codex-788c25f0",
+      "primary_keyword": "openai codex",
+      "keywords": [
+        "openai codex"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1145
+    },
+    {
+      "signal_id": "deepseek-v4-1-flash-1017-4c611d67",
+      "primary_keyword": "deepseek-v4.1-flash-1017",
+      "keywords": [
+        "deepseek-v4.1-flash-1017"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1115
     }
   ]
 }
