@@ -1,28 +1,4 @@
 {
-  "2026-07-27": [
-    {
-      "signal_id": "self-hosted-3f51ceab",
-      "primary_keyword": "self-hosted",
-      "keywords": [
-        "self-hosted"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 888
-    },
-    {
-      "signal_id": "django-2b9afb89",
-      "primary_keyword": "django",
-      "keywords": [
-        "django"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 147
-    }
-  ],
   "2026-07-28": [
     {
       "signal_id": "claude-8bb75b30",
@@ -2664,6 +2640,52 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 325
+    }
+  ],
+  "2026-10-26": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "mini-44c6c370",
+      "primary_keyword": "mini",
+      "keywords": [
+        "mini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 1521
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1317
+    },
+    {
+      "signal_id": "openai-2c6ee24b",
+      "primary_keyword": "openai",
+      "keywords": [
+        "openai"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 284
     }
   ]
 }
