@@ -1,39 +1,4 @@
 {
-  "2026-08-03": [
-    {
-      "signal_id": "gemini-48bafc50",
-      "primary_keyword": "gemini",
-      "keywords": [
-        "gemini"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 3346
-    },
-    {
-      "signal_id": "server-cf1e8c14",
-      "primary_keyword": "server",
-      "keywords": [
-        "server"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 1998
-    },
-    {
-      "signal_id": "openai-2c6ee24b",
-      "primary_keyword": "openai",
-      "keywords": [
-        "openai"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 832
-    }
-  ],
   "2026-08-04": [
     {
       "signal_id": "gemini-48bafc50",
@@ -2742,6 +2707,19 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 1723
+    }
+  ],
+  "2026-11-02": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
     }
   ]
 }
