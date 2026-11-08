@@ -1,17 +1,4 @@
 {
-  "2026-08-09": [
-    {
-      "signal_id": "claude-8bb75b30",
-      "primary_keyword": "claude",
-      "keywords": [
-        "claude"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 644
-    }
-  ],
   "2026-08-10": [
     {
       "signal_id": "gemini-48bafc50",
@@ -2721,5 +2708,6 @@
       "type": "rising_tool",
       "top_score": 1155
     }
-  ]
+  ],
+  "2026-11-08": []
 }
