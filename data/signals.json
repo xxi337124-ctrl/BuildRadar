@@ -1,28 +1,4 @@
 {
-  "2026-08-15": [
-    {
-      "signal_id": "claude-8bb75b30",
-      "primary_keyword": "claude",
-      "keywords": [
-        "claude"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 3646
-    },
-    {
-      "signal_id": "rustdesk-70f4c86e",
-      "primary_keyword": "rustdesk",
-      "keywords": [
-        "rustdesk"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 237
-    }
-  ],
   "2026-08-16": [],
   "2026-08-17": [
     {
@@ -2719,6 +2695,41 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 690
+    }
+  ],
+  "2026-11-14": [
+    {
+      "signal_id": "qwen3-8-27b-1cd563ce",
+      "primary_keyword": "qwen3.8-27b",
+      "keywords": [
+        "qwen3.8-27b"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 19922
+    },
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "system-54b53072",
+      "primary_keyword": "system",
+      "keywords": [
+        "system"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 2935
     }
   ]
 }
