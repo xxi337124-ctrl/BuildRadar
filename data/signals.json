@@ -1,5 +1,4 @@
 {
-  "2026-08-16": [],
   "2026-08-17": [
     {
       "signal_id": "ai-agent-1d72e998",
@@ -2730,6 +2729,30 @@
       "grade": "B",
       "type": "opportunity",
       "top_score": 2935
+    }
+  ],
+  "2026-11-15": [
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "deepseek-b6db407c",
+      "primary_keyword": "deepseek",
+      "keywords": [
+        "deepseek"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 234
     }
   ]
 }
