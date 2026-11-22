@@ -1,61 +1,4 @@
 {
-  "2026-08-23": [
-    {
-      "signal_id": "gemini-48bafc50",
-      "primary_keyword": "gemini",
-      "keywords": [
-        "gemini"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "opportunity",
-      "top_score": 3346
-    },
-    {
-      "signal_id": "ai-agent-1d72e998",
-      "primary_keyword": "ai agent",
-      "keywords": [
-        "ai agent"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 2683
-    },
-    {
-      "signal_id": "openai-codex-788c25f0",
-      "primary_keyword": "openai codex",
-      "keywords": [
-        "openai codex"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 1544
-    },
-    {
-      "signal_id": "claude-8bb75b30",
-      "primary_keyword": "claude",
-      "keywords": [
-        "claude"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 641
-    },
-    {
-      "signal_id": "nanogpt-5c7dfc0b",
-      "primary_keyword": "nanogpt",
-      "keywords": [
-        "nanogpt"
-      ],
-      "platform_count": 2,
-      "grade": "B",
-      "type": "rising_tool",
-      "top_score": 66
-    }
-  ],
   "2026-08-24": [
     {
       "signal_id": "gemini-48bafc50",
@@ -2819,6 +2762,63 @@
       "grade": "B",
       "type": "rising_tool",
       "top_score": 1241
+    }
+  ],
+  "2026-11-22": [
+    {
+      "signal_id": "inkling-2-mini-0b981d64",
+      "primary_keyword": "inkling-2-mini",
+      "keywords": [
+        "inkling-2-mini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 3641
+    },
+    {
+      "signal_id": "gemini-48bafc50",
+      "primary_keyword": "gemini",
+      "keywords": [
+        "gemini"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "opportunity",
+      "top_score": 3346
+    },
+    {
+      "signal_id": "claude-8bb75b30",
+      "primary_keyword": "claude",
+      "keywords": [
+        "claude"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1803
+    },
+    {
+      "signal_id": "ai-agent-1d72e998",
+      "primary_keyword": "ai agent",
+      "keywords": [
+        "ai agent"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 1006
+    },
+    {
+      "signal_id": "self-hosted-3f51ceab",
+      "primary_keyword": "self-hosted",
+      "keywords": [
+        "self-hosted"
+      ],
+      "platform_count": 2,
+      "grade": "B",
+      "type": "rising_tool",
+      "top_score": 118
     }
   ]
 }
